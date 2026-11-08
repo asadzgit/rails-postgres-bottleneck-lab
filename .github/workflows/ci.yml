@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Cache locked gems
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .bundle/gems
           key: gems-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '.ruby-version') }}

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p .bundle
+exec 9>.bundle/experiment.lock
+flock -n 9 || { echo 'Another experiment is running.' >&2; exit 2; }
+output="$(realpath -m "${1:-results/monitoring-$(date -u +%Y%m%dT%H%M%SZ)}")"
+case "$output" in "$PWD/results/"*) ;; *) echo 'Output must be inside results/' >&2; exit 2;; esac
+[[ ! -e "$output" ]] || { echo 'Refusing to overwrite results' >&2; exit 2; }
+mkdir -p "$output"
+relative="${output#"$PWD/results/"}"
+export LAB_EXPERIMENT_ENDPOINTS=1 RAILS_ENV=benchmark LAB_DB_HOST=db LAB_DB_PORT=5432 LAB_DB_USER=rails PGBOUNCER=0
+script/setup-dev
+bin/lab --profile cache up -d --wait redis
+bin/lab up -d --force-recreate --wait web
+bin/lab --profile observability up -d prometheus grafana
+bin/lab exec -T web bin/rails runner script/check-monitoring.rb "/app/results/$relative"
+printf 'Local monitoring ready on Ubuntu loopback ports 9090 and 3001; stop with bin/lab --profile '\''*'\'' down.\n'

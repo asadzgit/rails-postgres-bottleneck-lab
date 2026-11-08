@@ -1,0 +1,14 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+-781117743281179605,4861,382.188,0.079,0.103,97220,111292,968,0,0,"SELECT ""orders"".* FROM ""orders"" WHERE ""orders"".""customer_id"" = $1 ORDER BY ""orders"".""created_at"" DESC, ""orders"".""id"" DESC LIMIT $2"
+542182855171485980,4861,78.122,0.016,0.043,4861,14583,0,0,0,"SELECT ""customers"".* FROM ""customers"" WHERE ""customers"".""id"" = $1 LIMIT $2"
+-4457300114543951811,1,23.165,23.165,0.000,1,9616,0,0,0,SELECT count(*) AS orders FROM orders
+1774962624984196097,8,2.777,0.347,0.397,40,32,0,0,0,"SELECT clock_timestamp() AS sampled_at, pid, application_name, state, wait_event_type, wait_event,
+       now() - query_start AS query_age, left(query, $1) AS query
+FROM pg_stat_activity
+WHERE datname = current_database() AND pid <> pg_backend_pid()
+ORDER BY query_start"
+-2914826383223362791,1,0.230,0.230,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()
+-8456529339170697890,1,0.006,0.006,0.000,0,0,0,0,0,SHOW max_parallel_workers_per_gather
+4323641547842593104,1,0.001,0.001,0.000,0,0,0,0,0,SHOW work_mem
+8540686320037374802,1,0.000,0.000,0.000,0,0,0,0,0,SHOW effective_cache_size
+8211887703637991669,1,0.000,0.000,0.000,0,0,0,0,0,SHOW max_connections

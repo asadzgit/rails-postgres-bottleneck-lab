@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p .bundle
+exec 9>.bundle/experiment.lock
+flock -n 9 || { echo 'Another experiment is running in this checkout.' >&2; exit 2; }
+scenario="${1:-}"
+case "$scenario" in cache-off|cache-on|read-primary|read-replica|partition-heap|partition-fanout|partition-pruned|shard-single|shard-sharded) ;; *) echo 'Choose cache-off/on, read-primary/replica, partition-heap/fanout/pruned, shard-single/sharded' >&2; exit 2;; esac
+output="$(realpath -m "${2:-results/$scenario-$(date -u +%Y%m%dT%H%M%SZ)}")"
+case "$output" in "$PWD/results/"*) ;; *) echo 'Output must be inside results/' >&2; exit 2;; esac
+[[ ! -e "$output" ]] || { echo 'Refusing to overwrite results' >&2; exit 2; }
+mkdir -p "$output"
+relative="${output#"$PWD/results/"}"
+export RAILS_ENV=benchmark LAB_EXPERIMENT_ENDPOINTS=1 LAB_DB_HOST=db LAB_DB_PORT=5432 LAB_DB_USER=rails PGBOUNCER=0
+export RAILS_MAX_THREADS=10 DB_POOL=10 WEB_CONCURRENCY=0 K6_VUS="${K6_VUS:-10}" K6_DURATION="${K6_DURATION:-15s}"
+load_pid=''; load_name="rails-lab-advanced-$$"
+cleanup() { if [[ -n "$load_pid" ]]; then docker stop "$load_name" >/dev/null 2>&1 || true; wait "$load_pid" 2>/dev/null || true; fi; }
+trap cleanup EXIT
+trap 'exit 130' INT TERM
+psql_lab() { bin/lab exec -T db psql -X -U rails -d rails_postgres_bottleneck_lab_development -v ON_ERROR_STOP=1 "$@"; }
+bin/lab --profile observability stop prometheus grafana
+bin/lab up -d --wait db
+bin/lab run --rm web bin/rails lab:advanced:prepare
+case "$scenario" in
+ cache-*) bin/lab --profile cache up -d --wait redis; bin/lab run --rm web bin/rails lab:cache:clear;;
+ read-*) bin/lab --profile replication up -d --wait replica;;
+ partition-*) bin/lab run --rm -e EVENT_COUNT="${EVENT_COUNT:-1000000}" web bin/rails lab:partitions:prepare;;
+ shard-*) bin/lab --profile shards up -d --wait shard-a shard-b; bin/lab run --rm -e SHARD_CUSTOMERS="${SHARD_CUSTOMERS:-10000}" -e SHARD_ORDERS="${SHARD_ORDERS:-1000000}" web bin/rails lab:shards:prepare;;
+esac
+bin/lab up -d --force-recreate --wait web
+bin/lab --profile tools pull --policy missing k6
+expected_version="$(psql_lab -Atc 'SELECT version FROM lab_replica_items WHERE id=1')"
+expected_count=0; expected_total=0
+if [[ "$scenario" == partition-* ]]; then
+ IFS='|' read -r expected_count expected_total < <(psql_lab -Atc "SELECT count(*),sum(amount_cents) FROM lab_partitioning.events_heap WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'")
+fi
+{
+ date -u +%FT%TZ
+ printf 'scenario=%s\nvus=%s\nduration=%s\nthreads=10\npool=10\ncache_ttl=30\ncache_work_ms=20\nexpected_version=%s\nexpected_count=%s\nexpected_total=%s\n' "$scenario" "$K6_VUS" "$K6_DURATION" "$expected_version" "$expected_count" "$expected_total"
+ script/source-metadata
+ sha256sum Gemfile.lock compose.yaml app/controllers/advanced_lab_controller.rb lib/lab/cache.rb lib/lab/replica.rb lib/lab/partitions.rb lib/lab/shards.rb experiments/advanced/workload.js
+ docker info --format 'cgroup_driver={{.CgroupDriver}}'
+ docker inspect "$(bin/lab ps -q db)" --format 'primary_image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}}'
+ psql_lab -c 'SELECT version(); SHOW shared_buffers; SHOW max_connections;'
+ if [[ "$scenario" == shard-* ]]; then
+   for service in shard-a shard-b; do docker inspect "$(bin/lab ps -q "$service")" --format 'node={{.Name}} image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}}'; done
+ fi
+} > "$output/metadata.txt"
+load_args=(-e ADVANCED_SCENARIO="$scenario" -e EXPECTED_VERSION="$expected_version" -e EXPECTED_COUNT="$expected_count" -e EXPECTED_TOTAL="$expected_total" -e SHARD_CUSTOMERS="${SHARD_CUSTOMERS:-10000}")
+K6_DURATION="${WARMUP_DURATION:-3s}" bin/lab --profile tools run --rm "${load_args[@]}" k6 run /experiments/advanced/workload.js > "$output/warmup.txt" 2>&1
+psql_lab -c 'SELECT pg_stat_statements_reset();' > "$output/reset.txt"
+if [[ "$scenario" == read-* ]]; then bin/lab --profile replication exec -T replica psql -X -U rails -d rails_postgres_bottleneck_lab_development -c 'SELECT pg_stat_statements_reset();' >> "$output/reset.txt"; fi
+if [[ "$scenario" == cache-* ]]; then bin/lab --profile cache exec -T redis redis-cli INFO stats > "$output/redis-before.txt"; fi
+if [[ "$scenario" == shard-* ]]; then
+ for service in shard-a shard-b; do bin/lab --profile shards exec -T "$service" psql -X -U rails -d lab_shard -c 'SELECT pg_stat_statements_reset();' >> "$output/reset.txt"; done
+fi
+started="$(date -u +%FT%TZ)"
+printf 'started=%s\n' "$started" > "$output/timing.txt"
+bin/lab --profile tools run --rm --name "$load_name" "${load_args[@]}" k6 run --summary-export "/results/$relative/k6-summary.json" /experiments/advanced/workload.js > "$output/k6.txt" 2>&1 &
+load_pid=$!
+while kill -0 "$load_pid" 2>/dev/null; do
+ printf '\n=== %s ===\n' "$(date -u +%FT%TZ)" >> "$output/activity.txt"
+ psql_lab < experiments/02-connection-exhaustion/activity.sql >> "$output/activity.txt"
+ if [[ "$scenario" == read-* ]]; then
+   psql_lab -c 'SELECT application_name,state,sent_lsn,write_lsn,flush_lsn,replay_lsn FROM pg_stat_replication;' >> "$output/replication.txt"
+ fi
+ sleep 1
+done
+set +e
+wait "$load_pid"; result=$?
+set -e
+load_pid=''
+psql_lab --csv < experiments/01-missing-index/statements.sql > "$output/primary-statements.csv"
+if [[ "$scenario" == read-* ]]; then bin/lab --profile replication exec -T replica psql -X --csv -U rails -d rails_postgres_bottleneck_lab_development < experiments/01-missing-index/statements.sql > "$output/replica-statements.csv"; fi
+if [[ "$scenario" == cache-* ]]; then bin/lab --profile cache exec -T redis redis-cli INFO stats > "$output/redis-after.txt"; fi
+if [[ "$scenario" == shard-* ]]; then
+ for service in shard-a shard-b; do
+  bin/lab --profile shards exec -T "$service" psql -X -U rails -d lab_shard -c 'SELECT count(*) AS rows, sum(amount_cents) AS total_cents FROM orders;' > "$output/$service.txt"
+  bin/lab --profile shards exec -T "$service" psql -X --csv -U rails -d lab_shard < experiments/01-missing-index/statements.sql > "$output/$service-statements.csv"
+ done
+ bin/lab --profile shards exec -T shard-a psql -X --csv -U rails -d lab_single < experiments/01-missing-index/statements.sql > "$output/single-statements.csv"
+fi
+bin/lab logs --since "$started" --no-color web > "$output/rails.log"
+printf 'ended=%s\n' "$(date -u +%FT%TZ)" >> "$output/timing.txt"
+printf '%s\n' "$result" > "$output/exit-status.txt"
+cat "$output/k6.txt"
+printf '\nArtifacts: %s\n' "$output"
+exit "$result"

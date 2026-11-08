@@ -1,0 +1,73 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /experiments/common/workload.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 12 max VUs, 35s max duration (incl. graceful stop):
+              * default: 12 looping VUs for 5s (gracefulStop: 30s)
+
+
+running (01.0s), 12/12 VUs, 67 complete and 0 interrupted iterations
+default   [  20% ] 12 VUs  1.0s/5s
+
+running (02.0s), 12/12 VUs, 168 complete and 0 interrupted iterations
+default   [  40% ] 12 VUs  2.0s/5s
+
+running (03.0s), 12/12 VUs, 273 complete and 0 interrupted iterations
+default   [  60% ] 12 VUs  3.0s/5s
+
+running (04.0s), 12/12 VUs, 385 complete and 0 interrupted iterations
+default   [  80% ] 12 VUs  4.0s/5s
+
+running (05.0s), 12/12 VUs, 494 complete and 0 interrupted iterations
+default   [ 100% ] 12 VUs  5.0s/5s
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate==1' rate=100.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 506     99.778105/s
+    checks_succeeded...................: 100.00% 506 out of 506
+    checks_failed......................: 0.00%   0 out of 506
+
+    ✓ recognized success or explicit experiment failure
+
+    CUSTOM
+    database_connection_errors..............................................: 64.42% 326 out of 506
+    lock_timeouts...........................................................: 0.00%  0 out of 506
+    rails_pool_timeouts.....................................................: 0.00%  0 out of 506
+    successful_latency......................................................: avg=110.79ms min=101.68ms med=104.2ms  max=277.34ms p(90)=115.27ms p(95)=130.69ms
+    successful_requests.....................................................: 35.57% 180 out of 506
+
+    HTTP
+    http_req_duration.......................................................: avg=118.97ms min=101.68ms med=108.74ms max=294.05ms p(90)=143.31ms p(95)=153.48ms
+      { expected_response:true }............................................: avg=110.79ms min=101.68ms med=104.2ms  max=277.34ms p(90)=115.27ms p(95)=130.69ms
+    http_req_failed.........................................................: 64.42% 326 out of 506
+    http_reqs...............................................................: 506    99.778105/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=119.21ms min=101.91ms med=108.89ms max=295.92ms p(90)=143.44ms p(95)=153.58ms
+    iterations..............................................................: 506    99.778105/s
+    vus.....................................................................: 12     min=12         max=12
+    vus_max.................................................................: 12     min=12         max=12
+
+    NETWORK
+    data_received...........................................................: 251 kB 50 kB/s
+    data_sent...............................................................: 46 kB  9.1 kB/s
+
+
+
+
+running (05.1s), 00/12 VUs, 506 complete and 0 interrupted iterations
+default ✓ [ 100% ] 12 VUs  5s

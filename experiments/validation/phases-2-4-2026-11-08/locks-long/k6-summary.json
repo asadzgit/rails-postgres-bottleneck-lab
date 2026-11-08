@@ -1,0 +1,163 @@
+{
+    "metrics": {
+        "vus": {
+            "value": 12,
+            "min": 12,
+            "max": 12
+        },
+        "checks": {
+            "passes": 563,
+            "fails": 0,
+            "thresholds": {
+                "rate==1": false
+            },
+            "value": 1
+        },
+        "http_reqs": {
+            "count": 563,
+            "rate": 110.16097569597305
+        },
+        "http_req_waiting": {
+            "max": 342.721588,
+            "p(90)": 149.0977944,
+            "p(95)": 154.2115523,
+            "avg": 107.5665034298402,
+            "min": 53.303373,
+            "med": 102.549415
+        },
+        "http_req_receiving": {
+            "p(95)": 0.1729768,
+            "avg": 0.06832910124333925,
+            "min": 0.013741,
+            "med": 0.043886,
+            "max": 0.838964,
+            "p(90)": 0.121978
+        },
+        "http_req_failed": {
+            "passes": 516,
+            "fails": 47,
+            "value": 0.91651865008881
+        },
+        "http_req_sending": {
+            "p(95)": 0.03274589999999998,
+            "avg": 0.015912952042628763,
+            "min": 0.004226,
+            "med": 0.008813,
+            "max": 0.366122,
+            "p(90)": 0.0237518
+        },
+        "vus_max": {
+            "value": 12,
+            "min": 12,
+            "max": 12
+        },
+        "http_req_duration{expected_response:true}": {
+            "max": 342.914564,
+            "p(90)": 158.0703508,
+            "p(95)": 160.85741509999997,
+            "avg": 155.31176734042552,
+            "min": 104.449579,
+            "med": 152.417577
+        },
+        "iteration_duration": {
+            "min": 53.715954,
+            "med": 102.864129,
+            "max": 345.225076,
+            "p(90)": 149.4319738,
+            "p(95)": 154.52799339999999,
+            "avg": 107.86762192184723
+        },
+        "data_sent": {
+            "count": 81072,
+            "rate": 15863.18050022012
+        },
+        "successful_latency": {
+            "max": 342.914564,
+            "p(90)": 158.0703508,
+            "p(95)": 160.85741509999997,
+            "avg": 155.31176734042552,
+            "min": 104.449579,
+            "med": 152.417577
+        },
+        "rails_pool_timeouts": {
+            "passes": 0,
+            "fails": 563,
+            "value": 0
+        },
+        "data_received": {
+            "count": 242610,
+            "rate": 47470.96680923627
+        },
+        "lock_timeouts": {
+            "passes": 516,
+            "fails": 47,
+            "value": 0.91651865008881
+        },
+        "http_req_blocked": {
+            "p(95)": 0.0059168999999999975,
+            "avg": 0.052896103019538204,
+            "min": 0.001002,
+            "med": 0.002064,
+            "max": 2.621711,
+            "p(90)": 0.004306000000000001
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0
+        },
+        "database_connection_errors": {
+            "passes": 0,
+            "fails": 563,
+            "value": 0
+        },
+        "iterations": {
+            "count": 563,
+            "rate": 110.16097569597305
+        },
+        "query_cancellations": {
+            "passes": 0,
+            "fails": 563,
+            "value": 0
+        },
+        "http_req_duration": {
+            "avg": 107.65074548312602,
+            "min": 53.430574,
+            "med": 102.646776,
+            "max": 342.914564,
+            "p(90)": 149.226244,
+            "p(95)": 154.3174589
+        },
+        "successful_requests": {
+            "passes": 47,
+            "fails": 516,
+            "value": 0.08348134991119005
+        },
+        "http_req_connecting": {
+            "avg": 0.018429346358792183,
+            "min": 0,
+            "med": 0,
+            "max": 1.827319,
+            "p(90)": 0,
+            "p(95)": 0
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "recognized success or explicit experiment failure": {
+                    "path": "::recognized success or explicit experiment failure",
+                    "id": "8550a2aa2de4e6c36e97668587708624",
+                    "passes": 563,
+                    "fails": 0,
+                    "name": "recognized success or explicit experiment failure"
+                }
+            }
+    }
+}

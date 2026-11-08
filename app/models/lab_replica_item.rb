@@ -1,0 +1,2 @@
+class LabReplicaItem < ApplicationRecord
+end

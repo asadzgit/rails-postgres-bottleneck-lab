@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p .bundle
+exec 9>.bundle/experiment.lock
+flock -n 9 || { echo 'Another experiment is running in this checkout.' >&2; exit 2; }
+scenario="${1:-}"
+case "$scenario" in
+  pool-starved|pool-balanced|db-exhausted|pooled|locks-long|locks-short) ;;
+  *) echo 'Usage: script/experiment-next pool-starved|pool-balanced|db-exhausted|pooled|locks-long|locks-short [results/subdirectory]' >&2; exit 2;;
+esac
+output="$(realpath -m "${2:-results/$scenario-$(date -u +%Y%m%dT%H%M%SZ)}")"
+case "$output" in "$PWD/results/"*) ;; *) echo 'Output must be inside results/' >&2; exit 2;; esac
+[[ ! -e "$output" ]] || { echo 'Refusing to overwrite existing results' >&2; exit 2; }
+mkdir -p "$output"
+relative="${output#"$PWD/results/"}"
+export RAILS_ENV=benchmark LAB_EXPERIMENT_ENDPOINTS=1 WEB_CONCURRENCY=0 RAILS_MAX_THREADS=12
+export DB_POOL=12 DB_CHECKOUT_TIMEOUT=2 LAB_DB_HOST=db LAB_DB_PORT=5432 LAB_DB_USER=lab_client PGBOUNCER=0
+export PGBOUNCER_POOL_SIZE=4 K6_VUS="${K6_VUS:-12}" K6_DURATION="${K6_DURATION:-15s}"
+limit=16
+experiment=connections
+mode=long
+require_success=0
+case "$scenario" in
+  pool-starved) DB_POOL=2; DB_CHECKOUT_TIMEOUT=0.05;;
+  pool-balanced) DB_CHECKOUT_TIMEOUT=0.05; require_success=1;;
+  db-exhausted) limit=4;;
+  pooled) limit=4; LAB_DB_HOST=pgbouncer; LAB_DB_PORT=6432; PGBOUNCER=1; require_success=1;;
+  locks-long) experiment=locks;;
+  locks-short) experiment=locks; mode=short; require_success=1;;
+esac
+load_name="rails-lab-next-$$"
+load_pid=''
+cleanup() {
+  if [[ -n "$load_pid" ]]; then docker stop "$load_name" >/dev/null 2>&1 || true; wait "$load_pid" 2>/dev/null || true; fi
+}
+trap cleanup EXIT
+trap 'exit 130' INT TERM
+psql_lab() { bin/lab exec -T db psql -X -U rails -d rails_postgres_bottleneck_lab_development -v ON_ERROR_STOP=1 "$@"; }
+# Release existing client/server connections before changing a role's budget.
+bin/lab stop web
+bin/lab --profile pooling stop pgbouncer
+bin/lab up -d --wait db
+bin/lab run --rm --no-deps -e PGHOST=db -e PGPORT=5432 -e PGUSER=rails -e PGBOUNCER=0 \
+  -e LAB_DB_CONNECTION_LIMIT="$limit" web bin/rails lab:connections:prepare
+if [[ "$experiment" == locks ]]; then
+  bin/lab run --rm --no-deps -e PGHOST=db -e PGPORT=5432 -e PGUSER=rails -e PGBOUNCER=0 web bin/rails lab:locks:reset
+fi
+if [[ "$scenario" == pooled ]]; then
+  bin/lab --profile pooling build pgbouncer
+  bin/lab --profile pooling up -d --wait pgbouncer
+fi
+bin/lab up -d --force-recreate --wait web
+bin/lab --profile tools pull --policy missing k6
+{
+  date -u +%FT%TZ
+  printf 'scenario=%s\nexperiment=%s\nvus=%s\nduration=%s\nthreads=%s\nAR_pool=%s\ncheckout_timeout=%s\nrole_limit=%s\n' \
+    "$scenario" "$experiment" "$K6_VUS" "$K6_DURATION" "$RAILS_MAX_THREADS" "$DB_POOL" "$DB_CHECKOUT_TIMEOUT" "$limit"
+  printf 'db_host=%s\ndb_port=%s\npgbouncer=%s\nbackend_pool_size=%s\nhold_ms=%s\nwork_ms=%s\nlock_timeout_ms=%s\nlock_mode=%s\nrequire_success=%s\n' \
+    "$LAB_DB_HOST" "$LAB_DB_PORT" "$PGBOUNCER" "$PGBOUNCER_POOL_SIZE" "${HOLD_MS:-100}" "${WORK_MS:-100}" "${LOCK_TIMEOUT_MS:-50}" "$mode" "$require_success"
+  script/source-metadata
+  sha256sum Gemfile.lock compose.yaml config/database.yml app/controllers/lab_controller.rb lib/lab/counter_increment.rb experiments/common/workload.js
+  docker info --format 'cgroup_driver={{.CgroupDriver}} cgroup_version={{.CgroupVersion}}'
+  docker inspect "$(bin/lab ps -q db)" --format 'db_image={{.Image}} cpus_nano={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}}'
+  psql_lab -c 'SELECT version(); SHOW max_connections; SHOW superuser_reserved_connections;'
+  psql_lab -c "SELECT rolname, rolconnlimit, rolsuper FROM pg_roles WHERE rolname='lab_client';"
+  if [[ "$scenario" == pooled ]]; then
+    bin/lab --profile pooling exec -T pgbouncer psql -X -h 127.0.0.1 -p 6432 -U rails -d pgbouncer -c 'SHOW VERSION;' -c 'SHOW CONFIG;'
+    bin/lab --profile pooling exec -T pgbouncer dpkg-query -W pgbouncer
+  fi
+} > "$output/metadata.txt"
+# No warmup for these overload/failure reproductions: each starts with fresh clients.
+psql_lab -c 'SELECT pg_stat_statements_reset();' > "$output/reset.txt"
+cgroup_driver="$(docker info --format '{{.CgroupDriver}}')"
+measurement_started="$(date -u +%FT%TZ)"
+printf 'started=%s\n' "$measurement_started" > "$output/timing.txt"
+bin/lab --profile tools run --rm --name "$load_name" \
+  -e EXPERIMENT="$experiment" -e LOCK_MODE="$mode" -e REQUIRE_SUCCESS="$require_success" \
+  -e HOLD_MS="${HOLD_MS:-100}" -e WORK_MS="${WORK_MS:-100}" -e LOCK_TIMEOUT_MS="${LOCK_TIMEOUT_MS:-50}" \
+  k6 run --summary-export "/results/$relative/k6-summary.json" /experiments/common/workload.js > "$output/k6.txt" 2>&1 &
+load_pid=$!
+while kill -0 "$load_pid" 2>/dev/null; do
+  printf '\n=== %s ===\n' "$(date -u +%FT%TZ)" >> "$output/activity.txt"
+  psql_lab < experiments/02-connection-exhaustion/activity.sql >> "$output/activity.txt"
+  if [[ "$experiment" == locks ]]; then
+    printf '\n=== %s ===\n' "$(date -u +%FT%TZ)" >> "$output/locks.txt"
+    psql_lab < experiments/04-lock-contention/blockers.sql >> "$output/locks.txt"
+  fi
+  bin/lab exec -T web curl -fsS http://127.0.0.1:3000/lab/pool >> "$output/rails-pool.jsonl"
+  printf '\n' >> "$output/rails-pool.jsonl"
+  if [[ "$scenario" == pooled ]]; then
+    printf '\n=== %s ===\n' "$(date -u +%FT%TZ)" >> "$output/pgbouncer.txt"
+    bin/lab --profile pooling exec -T pgbouncer psql -X -h 127.0.0.1 -p 6432 -U rails -d pgbouncer \
+      -c 'SHOW POOLS;' -c 'SHOW STATS;' -c 'SHOW CLIENTS;' -c 'SHOW SERVERS;' >> "$output/pgbouncer.txt"
+  fi
+  if [[ "$cgroup_driver" == none ]]; then
+    printf '{"resource_sampling":"unavailable","reason":"no per-container cgroup controller"}\n' >> "$output/resources.jsonl"
+  elif ! docker stats --no-stream --format '{{json .}}' "$(bin/lab ps -q db)" "$(bin/lab ps -q web)" >> "$output/resources.jsonl" 2>> "$output/resource-errors.log"; then
+    printf '{"resource_sample_error":"see resource-errors.log"}\n' >> "$output/resources.jsonl"
+  fi
+  sleep 1
+done
+set +e
+wait "$load_pid"
+result=$?
+set -e
+load_pid=''
+psql_lab --csv < experiments/01-missing-index/statements.sql > "$output/statements.csv"
+printf 'ended=%s\n' "$(date -u +%FT%TZ)" >> "$output/timing.txt"
+bin/lab logs --no-color --since "$measurement_started" web > "$output/rails.log"
+bin/lab logs --no-color --since "$measurement_started" db > "$output/postgres.log"
+if [[ "$experiment" == locks ]]; then
+  psql_lab -Atc 'SELECT value FROM lab_counters WHERE id=1' > "$output/counter.txt"
+  bin/lab exec -T web ruby -rjson -e '
+    dir = ARGV.fetch(0)
+    successes = JSON.parse(File.read(File.join(dir, "k6-summary.json"))).fetch("metrics").fetch("successful_requests").fetch("passes")
+    counter = Integer(File.read(File.join(dir, "counter.txt")))
+    abort "Counter differs from acknowledged successes: #{counter} vs #{successes}" unless counter == successes
+    puts "Counter exactly matches #{successes} acknowledged successful increments"
+  ' "/app/results/$relative" > "$output/counter-consistency.txt"
+fi
+if [[ "$scenario" == pooled ]]; then
+  bin/lab run --rm --no-deps web bin/rails runner script/check-pgbouncer.rb > "$output/protocol-check.txt"
+fi
+printf '%s\n' "$result" > "$output/exit-status.txt"
+cat "$output/k6.txt"
+printf '\nArtifacts: %s\n' "$output"
+# Expected overload stays in the metrics. Unknown responses / optimized failures fail k6.
+exit "$result"

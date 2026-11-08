@@ -1,0 +1,13 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+-5619453286514752008,1042,21049.124,20.201,0.385,1042,1042,0,0,0,"SELECT id, value, version, pg_sleep($1)::text AS simulated_work
+FROM lab_cache_items WHERE id=$2 /* lab_cache_load */"
+-2704593279265783320,5,1.008,0.202,0.047,25,85,0,0,0,"SELECT clock_timestamp() AS sampled_at, pid, usename, application_name, state,
+       wait_event_type, wait_event, now() - query_start AS query_age,
+       left(query, $1) AS query
+FROM pg_stat_activity
+WHERE datname = current_database() AND pid <> pg_backend_pid()
+ORDER BY usename, pid"
+-5900373699247563212,5,0.414,0.083,0.021,5,65,0,0,0,"SELECT usename, count(*) AS connections FROM pg_stat_activity
+WHERE datname = current_database() GROUP BY usename"
+-2914826383223362791,1,0.080,0.080,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()
+4927749794365417724,5,0.032,0.006,0.000,5,5,0,0,0,"SELECT rolname, rolconnlimit FROM pg_roles WHERE rolname = $1"

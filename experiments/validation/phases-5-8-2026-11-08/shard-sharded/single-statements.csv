@@ -1,0 +1,1 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query

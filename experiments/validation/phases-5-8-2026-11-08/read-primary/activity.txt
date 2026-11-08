@@ -1,0 +1,105 @@
+
+=== 2026-11-08T06:48:01Z ===
+          sampled_at           | pid  | usename |   application_name   | state | wait_event_type | wait_event |    query_age    |                                              query                                              
+-------------------------------+------+---------+----------------------+-------+-----------------+------------+-----------------+-------------------------------------------------------------------------------------------------
+ 2026-11-08 06:48:02.16528+00  | 2931 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.630856 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:02.165321+00 | 2932 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.160516 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:02.165322+00 | 2933 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.555171 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:02.165323+00 | 2934 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.630624 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:02.165324+00 | 2935 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.698374 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:48:03Z ===
+          sampled_at           | pid  | usename |   application_name   | state | wait_event_type | wait_event |    query_age     |                                              query                                              
+-------------------------------+------+---------+----------------------+-------+-----------------+------------+------------------+-------------------------------------------------------------------------------------------------
+ 2026-11-08 06:48:03.562076+00 | 2931 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | -00:00:00.00071  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:03.562083+00 | 2932 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.00189   | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:03.562084+00 | 2933 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:03.9521    | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:03.562085+00 | 2934 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.084563  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:03.562085+00 | 2935 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | -00:00:00.000286 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:48:04Z ===
+          sampled_at           | pid  | usename |   application_name   | state | wait_event_type | wait_event |    query_age     |                                              query                                              
+-------------------------------+------+---------+----------------------+-------+-----------------+------------+------------------+-------------------------------------------------------------------------------------------------
+ 2026-11-08 06:48:04.968707+00 | 2931 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | -00:00:00.000599 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:04.968715+00 | 2932 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.011111  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:04.968716+00 | 2933 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.089315  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:04.968717+00 | 2934 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | -00:00:00.001888 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:04.968717+00 | 2935 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.09054   | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:48:06Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type | wait_event |    query_age     |                                              query                                              
+-------------------------------+------+---------+----------------------+--------+-----------------+------------+------------------+-------------------------------------------------------------------------------------------------
+ 2026-11-08 06:48:06.343646+00 | 2931 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.015623  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:06.343653+00 | 2932 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | -00:00:00.000548 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:06.343654+00 | 2933 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:01.46298   | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:06.343655+00 | 2934 | rails   | rails_bottleneck_lab | active | Client          | ClientRead | -00:00:00.003329 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:06.343655+00 | 2935 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.102162  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:48:07Z ===
+          sampled_at           | pid  | usename |   application_name   | state | wait_event_type | wait_event |    query_age    |                                              query                                              
+-------------------------------+------+---------+----------------------+-------+-----------------+------------+-----------------+-------------------------------------------------------------------------------------------------
+ 2026-11-08 06:48:07.712507+00 | 2931 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.161912 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:07.712514+00 | 2932 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.158737 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:07.712515+00 | 2933 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.833499 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:07.712516+00 | 2934 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.538264 | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+ 2026-11-08 06:48:07.712516+00 | 2935 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.18641  | SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=1
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+

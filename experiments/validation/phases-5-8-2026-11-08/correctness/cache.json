@@ -1,0 +1,35 @@
+{
+  "mode": "cache",
+  "observed_at": "2026-11-08T06:55:54Z",
+  "stale_window_observed": true,
+  "miss": {
+    "id": 1,
+    "value": 102,
+    "version": 2,
+    "cache_status": "miss"
+  },
+  "hit": {
+    "id": 1,
+    "value": 102,
+    "version": 2,
+    "cache_status": "hit"
+  },
+  "write": {
+    "id": 1,
+    "value": 103,
+    "version": 3,
+    "cache_invalidated": true
+  },
+  "stale": {
+    "id": 1,
+    "value": 103,
+    "version": 3,
+    "cache_status": "hit"
+  },
+  "after_ttl": {
+    "id": 1,
+    "value": 104,
+    "version": 4,
+    "cache_status": "miss"
+  }
+}

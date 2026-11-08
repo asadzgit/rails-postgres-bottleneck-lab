@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p .bundle
+exec 9>.bundle/experiment.lock
+flock -n 9 || { echo 'Another experiment is running.' >&2; exit 2; }
+output="$(realpath -m "${1:-results/advanced-checks-$(date -u +%Y%m%dT%H%M%SZ)}")"
+case "$output" in "$PWD/results/"*) ;; *) echo 'Output must be inside results/' >&2; exit 2;; esac
+[[ ! -e "$output" ]] || { echo 'Refusing to overwrite results' >&2; exit 2; }
+mkdir -p "$output"
+relative="${output#"$PWD/results/"}"
+export LAB_EXPERIMENT_ENDPOINTS=1 RAILS_ENV=benchmark LAB_DB_HOST=db LAB_DB_USER=rails LAB_DB_PORT=5432 PGBOUNCER=0
+script/setup-dev
+bin/lab run --rm web bin/rails lab:advanced:prepare
+bin/lab --profile cache --profile replication --profile shards up -d --wait redis replica shard-a shard-b
+bin/lab run --rm -e EVENT_COUNT="${EVENT_COUNT:-1000000}" web bin/rails lab:partitions:prepare
+bin/lab run --rm -e SHARD_CUSTOMERS="${SHARD_CUSTOMERS:-10000}" -e SHARD_ORDERS="${SHARD_ORDERS:-1000000}" web bin/rails lab:shards:prepare
+bin/lab up -d --force-recreate --wait web
+check() { bin/lab exec -T web bin/rails runner script/check-advanced.rb "$1" "/app/results/$relative"; }
+for mode in cache replica partition shards; do check "$mode"; done
+redis_stopped=0; shard_stopped=0
+restore() {
+  if [[ "$redis_stopped" == 1 ]]; then bin/lab --profile cache up -d --wait redis; fi
+  if [[ "$shard_stopped" == 1 ]]; then bin/lab --profile shards up -d --wait shard-b; fi
+}
+trap restore EXIT
+trap 'exit 130' INT TERM
+redis_stopped=1
+bin/lab --profile cache stop redis
+check cache-outage
+bin/lab --profile cache up -d --wait redis
+redis_stopped=0
+shard_stopped=1
+bin/lab --profile shards stop shard-b
+check shard-outage
+bin/lab --profile shards up -d --wait shard-b
+shard_stopped=0
+printf 'All advanced correctness and fault checks passed; interrupted services restored.\n'

@@ -1,0 +1,76 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /experiments/advanced/workload.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 35s max duration (incl. graceful stop):
+              * default: 5 looping VUs for 5s (gracefulStop: 30s)
+
+
+running (01.0s), 5/5 VUs, 742 complete and 0 interrupted iterations
+default   [  20% ] 5 VUs  1.0s/5s
+
+running (02.0s), 5/5 VUs, 1454 complete and 0 interrupted iterations
+default   [  40% ] 5 VUs  2.0s/5s
+
+running (03.0s), 5/5 VUs, 2173 complete and 0 interrupted iterations
+default   [  60% ] 5 VUs  3.0s/5s
+
+running (04.0s), 5/5 VUs, 2845 complete and 0 interrupted iterations
+default   [  80% ] 5 VUs  4.0s/5s
+
+running (05.0s), 5/5 VUs, 3612 complete and 0 interrupted iterations
+default   [ 100% ] 5 VUs  5.0s/5s
+
+
+  █ THRESHOLDS 
+
+    cache_backend_unavailable
+    ✓ 'rate==0' rate=0.00%
+
+    checks
+    ✓ 'rate==1' rate=100.00%
+
+    http_req_failed
+    ✓ 'rate==0' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 3618    722.91675/s
+    checks_succeeded...................: 100.00% 3618 out of 3618
+    checks_failed......................: 0.00%   0 out of 3618
+
+    ✓ HTTP and dataset/route invariants
+
+    CUSTOM
+    cache_backend_unavailable...............................................: 0.00%  0 out of 3618
+    cache_hits..............................................................: 0.00%  0 out of 3618
+
+    HTTP
+    http_req_duration.......................................................: avg=6.7ms min=2.45ms med=5.89ms max=27.84ms p(90)=9.94ms  p(95)=11.42ms
+      { expected_response:true }............................................: avg=6.7ms min=2.45ms med=5.89ms max=27.84ms p(90)=9.94ms  p(95)=11.42ms
+    http_req_failed.........................................................: 0.00%  0 out of 3618
+    http_reqs...............................................................: 3618   722.91675/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=6.9ms min=2.59ms med=6.08ms max=28.06ms p(90)=10.15ms p(95)=11.61ms
+    iterations..............................................................: 3618   722.91675/s
+    vus.....................................................................: 5      min=5         max=5
+    vus_max.................................................................: 5      min=5         max=5
+
+    NETWORK
+    data_received...........................................................: 8.6 MB 1.7 MB/s
+    data_sent...............................................................: 390 kB 78 kB/s
+
+
+
+
+running (05.0s), 0/5 VUs, 3618 complete and 0 interrupted iterations
+default ✓ [ 100% ] 5 VUs  5s

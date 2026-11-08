@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+# Run from any directory. Never reseeds or changes the workload between a pair.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+mkdir -p .bundle
+exec 9>.bundle/experiment.lock
+flock -n 9 || { echo 'Another experiment is running in this checkout.' >&2; exit 2; }
+mode="${1:-}"
+if [[ "$mode" != baseline && "$mode" != optimized ]]; then
+  echo "Usage: script/experiment baseline|optimized [results/subdirectory]" >&2
+  exit 2
+fi
+output="${2:-results/${mode}-$(date -u +%Y%m%dT%H%M%SZ)}"
+case "$output" in results/*) ;; *) echo 'Output must be under results/' >&2; exit 2;; esac
+# Canonicalize before creating anything; reject traversal out of the result mount.
+output="$(realpath -m "$output")"
+case "$output" in "$PWD/results/"*) ;; *) echo 'Output escapes results/' >&2; exit 2;; esac
+if [[ -e "$output" ]]; then echo 'Choose a new output directory; existing results are never overwritten.' >&2; exit 2; fi
+mkdir -p "$output"
+relative="${output#"$PWD/results/"}"
+export RAILS_ENV=benchmark
+export K6_VUS="${K6_VUS:-10}" K6_DURATION="${K6_DURATION:-30s}" ORDER_LIMIT="${ORDER_LIMIT:-20}"
+load_name="rails-lab-k6-$$"
+load_pid=''
+cgroup_driver="$(docker info --format '{{.CgroupDriver}}')"
+cleanup() {
+  if [[ -n "$load_pid" ]]; then
+    docker stop "$load_name" >/dev/null 2>&1 || true
+    wait "$load_pid" 2>/dev/null || true
+  fi
+}
+trap cleanup EXIT
+trap 'exit 130' INT TERM
+psql_lab() { bin/lab exec -T db psql -X -U rails -d rails_postgres_bottleneck_lab_development -v ON_ERROR_STOP=1 "$@"; }
+bin/lab up -d --wait db
+export CUSTOMER_COUNT="$(psql_lab -Atc 'SELECT count(*) FROM customers')"
+if [[ "$CUSTOMER_COUNT" == 0 ]]; then echo 'Seed the database before running this experiment.' >&2; exit 1; fi
+if [[ "$mode" == baseline ]]; then index_task=disable; else index_task=enable; fi
+bin/lab run --rm web bin/rails "lab:index:$index_task"
+bin/lab up -d --wait web
+bin/lab --profile tools pull --policy missing k6
+{
+  date -u +%FT%TZ
+  printf 'mode=%s\nvus=%s\nduration=%s\nlimit=%s\ncustomers=%s\n' "$mode" "$K6_VUS" "$K6_DURATION" "$ORDER_LIMIT" "$CUSTOMER_COUNT"
+  script/source-metadata
+  sha256sum Gemfile.lock compose.yaml experiments/01-missing-index/k6.js lib/lab/seed_generator.rb
+  docker version --format '{{.Server.Version}}'
+  docker info --format 'cgroup_driver={{.CgroupDriver}} cgroup_version={{.CgroupVersion}}'
+  docker inspect "$(bin/lab ps -q db)" --format 'postgres_image={{.Image}} cpus_nano={{.HostConfig.NanoCpus}} memory_bytes={{.HostConfig.Memory}}'
+  docker inspect "$(bin/lab ps -q web)" --format 'rails_image={{.Image}}'
+  psql_lab -c 'SELECT version(); SELECT count(*) AS orders FROM orders; SHOW shared_buffers; SHOW shared_preload_libraries; SHOW track_io_timing;'
+  psql_lab -c "SELECT indexname, indexdef FROM pg_indexes WHERE tablename='orders' ORDER BY indexname;"
+  printf 'Rails threads/workers (do not change within a comparison):\n'
+  bin/lab exec -T web ruby -e 'puts "threads=#{ENV.fetch("RAILS_MAX_THREADS")} workers=#{ENV.fetch("WEB_CONCURRENCY")}"'
+} > "$output/metadata.txt"
+# Warm both runs identically; these results are separate from the measured window.
+K6_DURATION="${WARMUP_DURATION:-10s}" bin/lab --profile tools run --rm k6 run /scripts/k6.js > "$output/warmup.txt" 2>&1
+psql_lab -qAt -v customer_id=1 -v order_limit="$ORDER_LIMIT" < experiments/01-missing-index/explain.sql > "$output/plan.json"
+psql_lab -c 'SELECT pg_stat_statements_reset();' > "$output/reset.txt"
+printf '{"measurement_started":"%s"}\n' "$(date -u +%FT%TZ)" > "$output/resources.jsonl"
+bin/lab --profile tools run --rm --name "$load_name" k6 run --summary-export "/results/$relative/k6-summary.json" /scripts/k6.js > "$output/k6.txt" 2>&1 &
+load_pid=$!
+printf 'sampled_at,pid,application_name,state,wait_event_type,wait_event,query_age,query\n' > "$output/activity.csv"
+while kill -0 "$load_pid" 2>/dev/null; do
+  printf '{"sample_time":"%s"}\n' "$(date -u +%FT%TZ)" >> "$output/resources.jsonl"
+  containers=("$(bin/lab ps -q db)" "$(bin/lab ps -q web)")
+  if docker container inspect "$load_name" >/dev/null 2>&1; then containers+=("$load_name"); fi
+  if [[ "$cgroup_driver" == none ]]; then
+    printf '{"resource_sampling":"unavailable","reason":"no per-container cgroup controller"}\n' >> "$output/resources.jsonl"
+  elif ! docker stats --no-stream --format '{{json .}}' "${containers[@]}" >> "$output/resources.jsonl" 2>> "$output/resource-errors.log"; then
+    # k6 may exit/remove its container between discovery and sampling.
+    printf '{"resource_sample_error":"see resource-errors.log; possible container exit race"}\n' >> "$output/resources.jsonl"
+  fi
+  psql_lab --csv --tuples-only < experiments/01-missing-index/activity.sql >> "$output/activity.csv"
+  sleep 1
+done
+set +e
+wait "$load_pid"
+result=$?
+set -e
+load_pid=''
+psql_lab --csv < experiments/01-missing-index/statements.sql > "$output/statements.csv"
+printf '{"measurement_ended":"%s"}\n' "$(date -u +%FT%TZ)" >> "$output/resources.jsonl"
+cat "$output/k6.txt"
+printf '\nArtifacts: %s\n' "$output"
+exit "$result"

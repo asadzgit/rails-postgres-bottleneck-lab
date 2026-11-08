@@ -1,0 +1,2 @@
+class LabCacheItem < ApplicationRecord
+end

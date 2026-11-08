@@ -1,0 +1,41 @@
+{
+  "mode": "partition",
+  "observed_at": "2026-11-08T06:55:58Z",
+  "values": [
+    {
+      "count": 81960,
+      "total_cents": 4106342220,
+      "layout": "heap",
+      "pruning": true
+    },
+    {
+      "count": 81960,
+      "total_cents": 4106342220,
+      "layout": "partitioned",
+      "pruning": false
+    },
+    {
+      "count": 81960,
+      "total_cents": 4106342220,
+      "layout": "partitioned",
+      "pruning": true
+    }
+  ],
+  "pruned_relations": [
+    "events_2024_06"
+  ],
+  "unpruned_relations": [
+    "events_2024_01",
+    "events_2024_03",
+    "events_2024_05",
+    "events_2024_07",
+    "events_2024_08",
+    "events_2024_10",
+    "events_2024_12",
+    "events_2024_04",
+    "events_2024_06",
+    "events_2024_09",
+    "events_2024_11",
+    "events_2024_02"
+  ]
+}

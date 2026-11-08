@@ -1,0 +1,132 @@
+
+=== 2026-11-08T05:29:17Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T05:29:19Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state  | wait_event_type | wait_event |    query_age    |                                query                                
+-------------------------------+------+------------+----------------------+--------+-----------------+------------+-----------------+---------------------------------------------------------------------
+ 2026-11-08 05:29:19.353451+00 | 4422 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.098661 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353458+00 | 4423 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.025122 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353459+00 | 4424 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.000703 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.35346+00  | 4425 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.007487 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.35346+00  | 4426 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.020427 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353461+00 | 4427 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.030336 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353461+00 | 4428 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.021279 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353462+00 | 4429 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.029901 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353462+00 | 4430 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.020659 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353463+00 | 4431 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.025645 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353463+00 | 4432 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.025355 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:19.353466+00 | 4433 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.021588 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:29:20Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state  | wait_event_type | wait_event |    query_age    |                                query                                
+-------------------------------+------+------------+----------------------+--------+-----------------+------------+-----------------+---------------------------------------------------------------------
+ 2026-11-08 05:29:20.696091+00 | 4422 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.06709  | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.6961+00   | 4423 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.05653  | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.6961+00   | 4424 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.072229 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696101+00 | 4425 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.058089 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696102+00 | 4426 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.055039 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696102+00 | 4427 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.05519  | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696103+00 | 4428 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.057454 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696103+00 | 4429 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.056172 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696103+00 | 4430 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.058794 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696104+00 | 4431 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.057086 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696104+00 | 4432 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.055693 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:20.696107+00 | 4433 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.057708 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:29:21Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state  | wait_event_type | wait_event |    query_age    |                                query                                
+-------------------------------+------+------------+----------------------+--------+-----------------+------------+-----------------+---------------------------------------------------------------------
+ 2026-11-08 05:29:22.046154+00 | 4422 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.057061 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046161+00 | 4423 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.090291 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046162+00 | 4424 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.056805 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046163+00 | 4425 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.000259 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046163+00 | 4426 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.089117 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046164+00 | 4427 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.089162 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046164+00 | 4428 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.017118 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046165+00 | 4429 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.093408 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046165+00 | 4430 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.093945 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046166+00 | 4431 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.092819 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046166+00 | 4432 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.0921   | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:22.046168+00 | 4433 | lab_client | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.093036 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:29:23Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state | wait_event_type | wait_event |    query_age    |                                query                                
+-------------------------------+------+------------+----------------------+-------+-----------------+------------+-----------------+---------------------------------------------------------------------
+ 2026-11-08 05:29:23.406792+00 | 4422 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.270111 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.4068+00   | 4423 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.298968 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406801+00 | 4424 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.27044  | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406801+00 | 4425 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.220616 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406802+00 | 4426 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.292659 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406802+00 | 4427 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.292842 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406803+00 | 4428 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.233381 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406803+00 | 4429 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.208327 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406804+00 | 4430 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.294112 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406804+00 | 4431 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.292475 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406804+00 | 4432 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.298422 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+ 2026-11-08 05:29:23.406807+00 | 4433 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.293172 | SELECT pg_backend_pid() AS backend_pid, pg_sleep(0.1)::text AS work
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+

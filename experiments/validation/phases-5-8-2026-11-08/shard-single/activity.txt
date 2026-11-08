@@ -1,0 +1,80 @@
+
+=== 2026-11-08T06:57:28Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:57:29Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:57:30Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:57:31Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:57:32Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+

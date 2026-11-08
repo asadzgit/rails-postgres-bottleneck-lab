@@ -1,0 +1,4 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+380921463631736731,1179,144.164,0.122,0.237,23580,26463,765,0,0,"SELECT ""orders"".""id"", ""orders"".""customer_id"", ""orders"".""amount_cents"", ""orders"".""created_at"" FROM ""orders"" WHERE ""orders"".""customer_id"" = $1 ORDER BY ""orders"".""created_at"" DESC, ""orders"".""id"" DESC LIMIT $2"
+-4238999538657716022,1,15.709,15.709,0.000,1,3677,0,0,0,"SELECT count(*) AS rows, sum(amount_cents) AS total_cents FROM orders"
+1852087220203776907,1,0.070,0.070,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()

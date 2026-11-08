@@ -1,0 +1,155 @@
+
+=== 2026-11-08T06:53:42Z ===
+          sampled_at           | pid  | usename |   application_name   | state | wait_event_type | wait_event |    query_age    |                               query                               
+-------------------------------+------+---------+----------------------+-------+-----------------+------------+-----------------+-------------------------------------------------------------------
+ 2026-11-08 06:53:43.003629+00 | 6000 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.595624 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |       |                 |            |                 | FROM lab_cache_items WHERE id=18 /* lab_cache_load */            +
+                               |      |         |                      |       |                 |            |                 | 
+ 2026-11-08 06:53:43.003637+00 | 6001 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.585523 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |       |                 |            |                 | FROM lab_cache_items WHERE id=64 /* lab_cache_load */            +
+                               |      |         |                      |       |                 |            |                 | 
+ 2026-11-08 06:53:43.003638+00 | 6002 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.595312 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |       |                 |            |                 | FROM lab_cache_items WHERE id=98 /* lab_cache_load */            +
+                               |      |         |                      |       |                 |            |                 | 
+ 2026-11-08 06:53:43.003638+00 | 6003 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.596011 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |       |                 |            |                 | FROM lab_cache_items WHERE id=4 /* lab_cache_load */             +
+                               |      |         |                      |       |                 |            |                 | 
+ 2026-11-08 06:53:43.003639+00 | 6004 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.594733 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |       |                 |            |                 | FROM lab_cache_items WHERE id=84 /* lab_cache_load */            +
+                               |      |         |                      |       |                 |            |                 | 
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:53:44Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type | wait_event |    query_age    |                               query                               
+-------------------------------+------+---------+----------------------+--------+-----------------+------------+-----------------+-------------------------------------------------------------------
+ 2026-11-08 06:53:44.190335+00 | 6000 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.008401 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=61 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:44.190342+00 | 6001 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.005212 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=29 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:44.190343+00 | 6002 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.005637 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=49 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:44.190344+00 | 6003 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.006009 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=95 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:44.190344+00 | 6004 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.005937 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=78 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:53:45Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type | wait_event |    query_age    |                               query                               
+-------------------------------+------+---------+----------------------+--------+-----------------+------------+-----------------+-------------------------------------------------------------------
+ 2026-11-08 06:53:45.349702+00 | 6000 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.009913 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=91 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:45.349709+00 | 6001 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.005569 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=8 /* lab_cache_load */             +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:45.34971+00  | 6002 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.006005 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=62 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:45.349711+00 | 6003 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.006425 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=42 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+ 2026-11-08 06:53:45.349712+00 | 6004 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | 00:00:00.005108 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                 | FROM lab_cache_items WHERE id=11 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                 | 
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:53:46Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type | wait_event |    query_age     |                               query                               
+-------------------------------+------+---------+----------------------+--------+-----------------+------------+------------------+-------------------------------------------------------------------
+ 2026-11-08 06:53:46.531799+00 | 6000 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.023086  | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=30 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:46.531805+00 | 6001 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | -00:00:00.002724 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=1 /* lab_cache_load */             +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:46.531806+00 | 6002 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | -00:00:00.00222  | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=81 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:46.531807+00 | 6003 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.01869   | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=10 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:46.531807+00 | 6004 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | -00:00:00.001245 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=67 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:53:47Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type | wait_event |    query_age     |                               query                               
+-------------------------------+------+---------+----------------------+--------+-----------------+------------+------------------+-------------------------------------------------------------------
+ 2026-11-08 06:53:47.765544+00 | 6000 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.02241   | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=25 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:47.765551+00 | 6001 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.02278   | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=37 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:47.765552+00 | 6002 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | -00:00:00.001423 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=74 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:47.765553+00 | 6003 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | 00:00:00.021716  | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=42 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+ 2026-11-08 06:53:47.765554+00 | 6004 | rails   | rails_bottleneck_lab | active | Timeout         | PgSleep    | -00:00:00.001676 | SELECT id, value, version, pg_sleep(0.02)::text AS simulated_work+
+                               |      |         |                      |        |                 |            |                  | FROM lab_cache_items WHERE id=62 /* lab_cache_load */            +
+                               |      |         |                      |        |                 |            |                  | 
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+

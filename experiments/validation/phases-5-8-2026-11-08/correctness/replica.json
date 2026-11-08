@@ -1,0 +1,33 @@
+{
+  "mode": "replica",
+  "observed_at": "2026-11-08T06:55:57Z",
+  "before": {
+    "id": 1,
+    "value": 1,
+    "version": 1,
+    "in_recovery": true,
+    "source": "replica"
+  },
+  "write": {
+    "id": 1,
+    "value": 2,
+    "version": 2,
+    "min_lsn": "0/23F9A6F8"
+  },
+  "stale": {
+    "id": 1,
+    "value": 1,
+    "version": 1,
+    "in_recovery": true,
+    "source": "replica"
+  },
+  "fenced_status": 409,
+  "caught_up": {
+    "id": 1,
+    "value": 2,
+    "version": 2,
+    "in_recovery": true,
+    "source": "replica"
+  },
+  "server_rejected_write": true
+}

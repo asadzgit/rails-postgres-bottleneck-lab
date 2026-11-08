@@ -1,0 +1,112 @@
+
+=== 2026-11-08T05:34:29Z ===
+ sampled_at | pid | usename | state | wait_event_type | wait_event | transaction_age | blocking_pids | query 
+------------+-----+---------+-------+-----------------+------------+-----------------+---------------+-------
+(0 rows)
+
+ pid  |  locktype  |      mode       | granted |         relation          
+------+------------+-----------------+---------+---------------------------
+ 6724 | relation   | AccessShareLock | t       | pg_stat_activity
+ 6724 | relation   | AccessShareLock | t       | pg_locks
+ 6724 | virtualxid | ExclusiveLock   | t       | 
+ 6724 | relation   | AccessShareLock | t       | pg_authid_oid_index
+ 6724 | relation   | AccessShareLock | t       | pg_database_oid_index
+ 6724 | relation   | AccessShareLock | t       | pg_authid_rolname_index
+ 6724 | relation   | AccessShareLock | t       | pg_database_datname_index
+ 6724 | relation   | AccessShareLock | t       | pg_database
+ 6724 | relation   | AccessShareLock | t       | pg_authid
+(9 rows)
+
+
+=== 2026-11-08T05:34:31Z ===
+          sampled_at           | pid  |  usename   | state | wait_event_type | wait_event | transaction_age | blocking_pids | query  
+-------------------------------+------+------------+-------+-----------------+------------+-----------------+---------------+--------
+ 2026-11-08 05:34:31.550254+00 | 6735 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550266+00 | 6733 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550267+00 | 6731 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550268+00 | 6728 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550269+00 | 6730 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550269+00 | 6736 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.55027+00  | 6734 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550271+00 | 6726 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550271+00 | 6725 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550272+00 | 6727 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550273+00 | 6729 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:31.550273+00 | 6732 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+(12 rows)
+
+ pid  |  locktype  |      mode       | granted |         relation          
+------+------------+-----------------+---------+---------------------------
+ 6757 | relation   | AccessShareLock | t       | pg_stat_activity
+ 6757 | relation   | AccessShareLock | t       | pg_locks
+ 6757 | virtualxid | ExclusiveLock   | t       | 
+ 6757 | relation   | AccessShareLock | t       | pg_authid
+ 6757 | relation   | AccessShareLock | t       | pg_database
+ 6757 | relation   | AccessShareLock | t       | pg_database_datname_index
+ 6757 | relation   | AccessShareLock | t       | pg_authid_rolname_index
+ 6757 | relation   | AccessShareLock | t       | pg_database_oid_index
+ 6757 | relation   | AccessShareLock | t       | pg_authid_oid_index
+(9 rows)
+
+
+=== 2026-11-08T05:34:32Z ===
+          sampled_at           | pid  |  usename   | state | wait_event_type | wait_event | transaction_age | blocking_pids | query  
+-------------------------------+------+------------+-------+-----------------+------------+-----------------+---------------+--------
+ 2026-11-08 05:34:33.053223+00 | 6735 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053234+00 | 6733 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053236+00 | 6731 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053237+00 | 6728 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053237+00 | 6730 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053238+00 | 6736 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053239+00 | 6734 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053239+00 | 6726 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.05324+00  | 6725 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053241+00 | 6727 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053241+00 | 6729 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:33.053242+00 | 6732 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+(12 rows)
+
+ pid  |  locktype  |      mode       | granted |         relation          
+------+------------+-----------------+---------+---------------------------
+ 6771 | relation   | AccessShareLock | t       | pg_stat_activity
+ 6771 | relation   | AccessShareLock | t       | pg_locks
+ 6771 | virtualxid | ExclusiveLock   | t       | 
+ 6771 | relation   | AccessShareLock | t       | pg_authid_rolname_index
+ 6771 | relation   | AccessShareLock | t       | pg_database_datname_index
+ 6771 | relation   | AccessShareLock | t       | pg_authid
+ 6771 | relation   | AccessShareLock | t       | pg_database
+ 6771 | relation   | AccessShareLock | t       | pg_authid_oid_index
+ 6771 | relation   | AccessShareLock | t       | pg_database_oid_index
+(9 rows)
+
+
+=== 2026-11-08T05:34:34Z ===
+          sampled_at           | pid  |  usename   | state | wait_event_type | wait_event | transaction_age | blocking_pids | query  
+-------------------------------+------+------------+-------+-----------------+------------+-----------------+---------------+--------
+ 2026-11-08 05:34:34.524843+00 | 6735 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524856+00 | 6733 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524857+00 | 6731 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524858+00 | 6728 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524858+00 | 6730 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524859+00 | 6736 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.52486+00  | 6734 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.52486+00  | 6726 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524861+00 | 6725 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524862+00 | 6727 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524862+00 | 6729 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+ 2026-11-08 05:34:34.524863+00 | 6732 | lab_client | idle  | Client          | ClientRead |                 | {}            | COMMIT
+(12 rows)
+
+ pid  |  locktype  |      mode       | granted |         relation          
+------+------------+-----------------+---------+---------------------------
+ 6793 | relation   | AccessShareLock | t       | pg_stat_activity
+ 6793 | relation   | AccessShareLock | t       | pg_locks
+ 6793 | virtualxid | ExclusiveLock   | t       | 
+ 6793 | relation   | AccessShareLock | t       | pg_authid_rolname_index
+ 6793 | relation   | AccessShareLock | t       | pg_database
+ 6793 | relation   | AccessShareLock | t       | pg_authid
+ 6793 | relation   | AccessShareLock | t       | pg_database_datname_index
+ 6793 | relation   | AccessShareLock | t       | pg_database_oid_index
+ 6793 | relation   | AccessShareLock | t       | pg_authid_oid_index
+(9 rows)
+

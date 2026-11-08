@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+docker volume create rails-lab-pgdata >/dev/null
+bin/lab pull --policy missing db web
+bin/lab run --rm --no-deps web bundle install
+bin/lab up -d --wait db
+bin/lab run --rm web bin/rails db:prepare
+RAILS_ENV=test bin/lab run --rm web bin/rails db:prepare

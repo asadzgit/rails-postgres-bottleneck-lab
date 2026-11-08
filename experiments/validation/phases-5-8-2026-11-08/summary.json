@@ -1,0 +1,56 @@
+{
+  "cache-off": {
+    "requests": 1042,
+    "http_p95_ms": 29.150680099999995,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "cache-on": {
+    "requests": 5528,
+    "http_p95_ms": 7.186707899999998,
+    "http_failures": 0,
+    "cache_hit_fraction": 1
+  },
+  "shard-single": {
+    "requests": 3618,
+    "http_p95_ms": 11.423441199999997,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "shard-sharded": {
+    "requests": 2359,
+    "http_p95_ms": 23.639699299999997,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "read-primary": {
+    "requests": 5110,
+    "http_p95_ms": 8.405858150000002,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "read-replica": {
+    "requests": 4878,
+    "http_p95_ms": 8.3621878,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "partition-heap": {
+    "requests": 269,
+    "http_p95_ms": 173.2212111999999,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "partition-fanout": {
+    "requests": 268,
+    "http_p95_ms": 148.09772575,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  },
+  "partition-pruned": {
+    "requests": 1452,
+    "http_p95_ms": 27.034417150000007,
+    "http_failures": 0,
+    "cache_hit_fraction": 0
+  }
+}

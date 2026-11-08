@@ -1,0 +1,75 @@
+2026-11-08T04:42:20Z
+mode=baseline
+vus=5
+duration=10s
+limit=20
+customers=10000
+8b920c9f469bbc9208fa9ad692d2561909bf5173
+ M README.md
+?? .dockerignore
+?? .env.example
+?? .github/
+?? .gitignore
+?? .rubocop.yml
+?? .ruby-version
+?? AGENTS.md
+?? Gemfile
+?? Gemfile.lock
+?? LICENSE
+?? Rakefile
+?? app/
+?? bin/
+?? compose.yaml
+?? config.ru
+?? config/
+?? db/
+?? experiments/
+?? lib/
+?? log/
+?? public/
+?? results/
+?? script/
+?? storage/
+?? test/
+?? tmp/
+?? vendor/
+3347a8ab29f8676634357e2189150b1607511e77d7d8b6dc36bc4a3b6babbaf8  Gemfile.lock
+8f12863ddd714ca3460fbccd920285692f58e86d6db6650f9513d4207cd7a0c6  compose.yaml
+baa19a9d88ccefe58ed7c6b8174ef2031889c6e432866db4ad4566f40959e8b2  experiments/01-missing-index/k6.js
+872fac4c4e59950430ff764fedd5a953580723b9cff4a17096eec45f0e0772fc  lib/lab/seed_generator.rb
+29.9.2
+cgroup_driver=none cgroup_version=2
+postgres_image=sha256:018dbecf6a31cfed1f83c218b5e428a52ac389ad46e495f72831641db49d85a9 cpus_nano=0 memory_bytes=0
+rails_image=sha256:39646d6e9feee4c90241f41f9655e3f297ade931ebc5143bd0234da7fe5387a5
+                                                           version                                                            
+------------------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 17.11 (Debian 17.11-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+(1 row)
+
+ orders  
+---------
+ 1000000
+(1 row)
+
+ shared_buffers 
+----------------
+ 128MB
+(1 row)
+
+ shared_preload_libraries 
+--------------------------
+ pg_stat_statements
+(1 row)
+
+ track_io_timing 
+-----------------
+ on
+(1 row)
+
+  indexname  |                             indexdef                              
+-------------+-------------------------------------------------------------------
+ orders_pkey | CREATE UNIQUE INDEX orders_pkey ON public.orders USING btree (id)
+(1 row)
+
+Rails threads/workers (do not change within a comparison):
+threads=5 workers=0

@@ -1,0 +1,9 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+-781117743281179605,552,41987.892,76.065,24.437,11040,5345399,0,0,0,"SELECT ""orders"".* FROM ""orders"" WHERE ""orders"".""customer_id"" = $1 ORDER BY ""orders"".""created_at"" DESC, ""orders"".""id"" DESC LIMIT $2"
+542182855171485980,552,11.794,0.021,0.009,552,1656,0,0,0,"SELECT ""customers"".* FROM ""customers"" WHERE ""customers"".""id"" = $1 LIMIT $2"
+1774962624984196097,6,0.988,0.165,0.059,43,24,0,0,0,"SELECT clock_timestamp() AS sampled_at, pid, application_name, state, wait_event_type, wait_event,
+       now() - query_start AS query_age, left(query, $1) AS query
+FROM pg_stat_activity
+WHERE datname = current_database() AND pid <> pg_backend_pid()
+ORDER BY query_start"
+-2914826383223362791,1,0.064,0.064,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()

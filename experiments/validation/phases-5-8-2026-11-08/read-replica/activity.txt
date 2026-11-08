@@ -1,0 +1,64 @@
+
+=== 2026-11-08T06:48:38Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:48:39Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:48:40Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T06:48:42Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+

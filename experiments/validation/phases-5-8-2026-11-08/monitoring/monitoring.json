@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-11-08T06:59:15Z",
+  "prometheus_build": {
+    "status": "success",
+    "data": {
+      "version": "3.16.0",
+      "revision": "e2e28adeee2c5883d000fc82aca6008cfbf7e96d",
+      "branch": "HEAD",
+      "buildUser": "root@880187fc0808",
+      "buildDate": "20261105-15:13:16",
+      "goVersion": "go1.27.3"
+    }
+  },
+  "grafana_health": {
+    "database": "ok",
+    "version": "13.3.0",
+    "commit": "6f8ce3c693b493043ebcd4787566d2b6b118b0f0"
+  },
+  "datasource_query": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {
+            "__name__": "lab_pg_up",
+            "instance": "web:3000",
+            "job": "rails-postgres-lab"
+          },
+          "value": [
+            1794121155.647,
+            "1"
+          ]
+        }
+      ]
+    }
+  },
+  "dashboard_uid": "rails-pg-lab",
+  "panels": 10
+}

@@ -1,0 +1,4 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+5953209165911450246,4878,51.910,0.011,0.022,4878,9756,0,0,0,"SELECT id, value, version, pg_is_in_recovery() AS in_recovery FROM lab_replica_items WHERE id=$1"
+-2914826383223362791,1,0.075,0.075,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()
+-6883023751393440299,3,0.014,0.005,0.002,3,0,0,0,0,SELECT pg_is_in_recovery()

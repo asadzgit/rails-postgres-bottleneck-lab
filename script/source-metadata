@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+if [[ -e .git ]] && revision="$(git rev-parse --verify HEAD 2>/dev/null)"; then
+  printf 'git_revision=%s\n' "$revision"
+  git status --short
+else
+  printf 'git_revision=unavailable (source archive or unborn checkout); retain source checksums\n'
+fi

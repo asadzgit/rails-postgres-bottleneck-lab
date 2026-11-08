@@ -1,0 +1,2 @@
+Transaction stayed on one backend; Active Record predicate executed.
+Prepared statements/advisory locks disabled; transaction-local timeout restored.

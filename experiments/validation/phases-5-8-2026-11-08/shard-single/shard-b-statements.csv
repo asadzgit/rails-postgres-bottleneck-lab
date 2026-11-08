@@ -1,0 +1,3 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+-4238999538657716022,1,13.615,13.615,0.000,1,3677,0,0,0,"SELECT count(*) AS rows, sum(amount_cents) AS total_cents FROM orders"
+1852087220203776907,1,0.089,0.089,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()

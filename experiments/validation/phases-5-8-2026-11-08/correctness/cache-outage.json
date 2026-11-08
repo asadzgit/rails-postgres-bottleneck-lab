@@ -1,0 +1,10 @@
+{
+  "mode": "cache-outage",
+  "observed_at": "2026-11-08T06:56:01Z",
+  "fallback": {
+    "id": 1,
+    "value": 104,
+    "version": 4,
+    "cache_status": "unavailable"
+  }
+}

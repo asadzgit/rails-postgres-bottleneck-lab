@@ -1,0 +1,62 @@
+{
+  "pool-starved": {
+    "requests": 877,
+    "successful_requests": 96,
+    "rails_pool_timeouts": 781,
+    "database_connection_errors": 0,
+    "lock_timeouts": 0,
+    "query_cancellations": null,
+    "successful_p95_ms": 162.29563725,
+    "http_failure_fraction": 0.8905359179019384
+  },
+  "pool-balanced": {
+    "requests": 536,
+    "successful_requests": 536,
+    "rails_pool_timeouts": 0,
+    "database_connection_errors": 0,
+    "lock_timeouts": 0,
+    "query_cancellations": null,
+    "successful_p95_ms": 132.4016865,
+    "http_failure_fraction": 0
+  },
+  "db-exhausted": {
+    "requests": 506,
+    "successful_requests": 180,
+    "rails_pool_timeouts": 0,
+    "database_connection_errors": 326,
+    "lock_timeouts": 0,
+    "query_cancellations": null,
+    "successful_p95_ms": 130.69328664999966,
+    "http_failure_fraction": 0.6442687747035574
+  },
+  "pooled": {
+    "requests": 200,
+    "successful_requests": 200,
+    "rails_pool_timeouts": 0,
+    "database_connection_errors": 0,
+    "lock_timeouts": 0,
+    "query_cancellations": null,
+    "successful_p95_ms": 317.7231217,
+    "http_failure_fraction": 0
+  },
+  "locks-long": {
+    "requests": 563,
+    "successful_requests": 47,
+    "rails_pool_timeouts": 0,
+    "database_connection_errors": 0,
+    "lock_timeouts": 516,
+    "query_cancellations": 0,
+    "successful_p95_ms": 160.85741509999997,
+    "http_failure_fraction": 0.91651865008881
+  },
+  "locks-short": {
+    "requests": 555,
+    "successful_requests": 555,
+    "rails_pool_timeouts": 0,
+    "database_connection_errors": 0,
+    "lock_timeouts": 0,
+    "query_cancellations": 0,
+    "successful_p95_ms": 131.2928165,
+    "http_failure_fraction": 0
+  }
+}

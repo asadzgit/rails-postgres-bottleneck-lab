@@ -1,0 +1,2 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+3323381413670791268,3618,199.094,0.055,0.055,72360,83549,0,0,0,"SELECT ""orders"".""id"", ""orders"".""customer_id"", ""orders"".""amount_cents"", ""orders"".""created_at"" FROM ""orders"" WHERE ""orders"".""customer_id"" = $1 ORDER BY ""orders"".""created_at"" DESC, ""orders"".""id"" DESC LIMIT $2"

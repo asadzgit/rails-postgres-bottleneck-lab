@@ -1,0 +1,103 @@
+
+=== 2026-11-08T05:33:37Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T05:33:39Z ===
+          sampled_at           | pid  |  usename   |   application_name   |        state        | wait_event_type |  wait_event   |    query_age    |                         query                          
+-------------------------------+------+------------+----------------------+---------------------+-----------------+---------------+-----------------+--------------------------------------------------------
+ 2026-11-08 05:33:39.832013+00 | 6417 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.026518 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832022+00 | 6418 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.033757 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832023+00 | 6419 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.070836 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832024+00 | 6420 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.070602 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832024+00 | 6421 | lab_client | rails_bottleneck_lab | idle in transaction | Client          | ClientRead    | 00:00:00.074912 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832025+00 | 6422 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.072462 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832025+00 | 6423 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.071461 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832026+00 | 6424 | lab_client | rails_bottleneck_lab | active              | Lock            | transactionid | 00:00:00.073816 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832026+00 | 6425 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.071787 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832027+00 | 6426 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.071683 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832027+00 | 6427 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.070766 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:39.832028+00 | 6428 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.047075 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:33:41Z ===
+          sampled_at           | pid  |  usename   |   application_name   |        state        | wait_event_type |  wait_event   |    query_age     |                         query                          
+-------------------------------+------+------------+----------------------+---------------------+-----------------+---------------+------------------+--------------------------------------------------------
+ 2026-11-08 05:33:41.364467+00 | 6417 | lab_client | rails_bottleneck_lab | active              | Lock            | transactionid | 00:00:00.035699  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364476+00 | 6418 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | -00:00:00.000017 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364477+00 | 6419 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.034885  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364478+00 | 6420 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.035478  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364478+00 | 6421 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.035132  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364479+00 | 6422 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.034662  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364479+00 | 6423 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.035339  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.36448+00  | 6424 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.034679  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.36448+00  | 6425 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | -00:00:00.000265 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364481+00 | 6426 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.034803  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364481+00 | 6427 | lab_client | rails_bottleneck_lab | idle in transaction | Client          | ClientRead    | 00:00:00.038836  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:41.364482+00 | 6428 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.035337  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:33:42Z ===
+          sampled_at           | pid  |  usename   |   application_name   |        state        | wait_event_type |  wait_event   |    query_age    |                         query                          
+-------------------------------+------+------------+----------------------+---------------------+-----------------+---------------+-----------------+--------------------------------------------------------
+ 2026-11-08 05:33:42.898514+00 | 6417 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.037462 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898523+00 | 6418 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.036185 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898524+00 | 6419 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.036078 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898525+00 | 6420 | lab_client | rails_bottleneck_lab | active              | Lock            | transactionid | 00:00:00.095489 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898525+00 | 6421 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.036179 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898526+00 | 6422 | lab_client | rails_bottleneck_lab | idle in transaction | Client          | ClientRead    | 00:00:00.135974 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898526+00 | 6423 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.035955 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898527+00 | 6424 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.037224 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898527+00 | 6425 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.036244 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898528+00 | 6426 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.036432 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898528+00 | 6427 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.036971 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:33:42.898529+00 | 6428 | lab_client | rails_bottleneck_lab | active              | Lock            | tuple         | 00:00:00.037094 | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+

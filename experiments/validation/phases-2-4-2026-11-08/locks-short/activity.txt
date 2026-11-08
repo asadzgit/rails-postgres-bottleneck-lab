@@ -1,0 +1,103 @@
+
+=== 2026-11-08T05:34:29Z ===
+ sampled_at | pid | usename | application_name | state | wait_event_type | wait_event | query_age | query 
+------------+-----+---------+------------------+-------+-----------------+------------+-----------+-------
+(0 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           1
+(1 row)
+
+
+=== 2026-11-08T05:34:31Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state | wait_event_type | wait_event |    query_age    | query  
+-------------------------------+------+------------+----------------------+-------+-----------------+------------+-----------------+--------
+ 2026-11-08 05:34:31.375973+00 | 6725 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.231118 | COMMIT
+ 2026-11-08 05:34:31.375982+00 | 6726 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.226391 | COMMIT
+ 2026-11-08 05:34:31.375982+00 | 6727 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.137183 | COMMIT
+ 2026-11-08 05:34:31.375983+00 | 6728 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.018712 | COMMIT
+ 2026-11-08 05:34:31.375984+00 | 6729 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.141434 | COMMIT
+ 2026-11-08 05:34:31.375984+00 | 6730 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.032925 | COMMIT
+ 2026-11-08 05:34:31.375985+00 | 6731 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.03214  | COMMIT
+ 2026-11-08 05:34:31.375985+00 | 6732 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.869969 | COMMIT
+ 2026-11-08 05:34:31.375986+00 | 6733 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.875635 | COMMIT
+ 2026-11-08 05:34:31.375986+00 | 6734 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.868611 | COMMIT
+ 2026-11-08 05:34:31.375986+00 | 6735 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.881597 | COMMIT
+ 2026-11-08 05:34:31.375987+00 | 6736 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.871163 | COMMIT
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:34:32Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state | wait_event_type | wait_event |    query_age    | query  
+-------------------------------+------+------------+----------------------+-------+-----------------+------------+-----------------+--------
+ 2026-11-08 05:34:32.890705+00 | 6725 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.746008 | COMMIT
+ 2026-11-08 05:34:32.890714+00 | 6726 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.741281 | COMMIT
+ 2026-11-08 05:34:32.890714+00 | 6727 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.20215  | COMMIT
+ 2026-11-08 05:34:32.890715+00 | 6728 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.015516 | COMMIT
+ 2026-11-08 05:34:32.890716+00 | 6729 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.080094 | COMMIT
+ 2026-11-08 05:34:32.890716+00 | 6730 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.428139 | COMMIT
+ 2026-11-08 05:34:32.890716+00 | 6731 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.207523 | COMMIT
+ 2026-11-08 05:34:32.890717+00 | 6732 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.077362 | COMMIT
+ 2026-11-08 05:34:32.890717+00 | 6733 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.390525 | COMMIT
+ 2026-11-08 05:34:32.890718+00 | 6734 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:01.422847 | COMMIT
+ 2026-11-08 05:34:32.890718+00 | 6735 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.396487 | COMMIT
+ 2026-11-08 05:34:32.890719+00 | 6736 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.058222 | COMMIT
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+
+
+=== 2026-11-08T05:34:34Z ===
+          sampled_at           | pid  |  usename   |   application_name   | state | wait_event_type | wait_event |    query_age    | query  
+-------------------------------+------+------------+----------------------+-------+-----------------+------------+-----------------+--------
+ 2026-11-08 05:34:34.353552+00 | 6725 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:04.208768 | COMMIT
+ 2026-11-08 05:34:34.35356+00  | 6726 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:04.204041 | COMMIT
+ 2026-11-08 05:34:34.353561+00 | 6727 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.020233 | COMMIT
+ 2026-11-08 05:34:34.353562+00 | 6728 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.072864 | COMMIT
+ 2026-11-08 05:34:34.353562+00 | 6729 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.079687 | COMMIT
+ 2026-11-08 05:34:34.353563+00 | 6730 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.890899 | COMMIT
+ 2026-11-08 05:34:34.353563+00 | 6731 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.670283 | COMMIT
+ 2026-11-08 05:34:34.353564+00 | 6732 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.073975 | COMMIT
+ 2026-11-08 05:34:34.353564+00 | 6733 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:03.853285 | COMMIT
+ 2026-11-08 05:34:34.353565+00 | 6734 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:02.885607 | COMMIT
+ 2026-11-08 05:34:34.353565+00 | 6735 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:03.859247 | COMMIT
+ 2026-11-08 05:34:34.353566+00 | 6736 | lab_client | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.071161 | COMMIT
+(12 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+  usename   | connections 
+------------+-------------
+ lab_client |          12
+ rails      |           1
+(2 rows)
+

@@ -1,0 +1,21 @@
+web-1  |   
+web-1  | ActiveRecord::QueryCanceled (PG::QueryCanceled: ERROR:  canceling statement due to user request
+web-1  | CONTEXT:  while locking tuple (0,68) in relation "lab_counters"
+web-1  | )
+web-1  | Caused by: PG::QueryCanceled (ERROR:  canceling statement due to user request
+web-1  | CONTEXT:  while locking tuple (0,68) in relation "lab_counters"
+web-1  | )
+web-1  | 
+web-1  | Information for: ActiveRecord::QueryCanceled (PG::QueryCanceled: ERROR:  canceling statement due to user request
+web-1  | CONTEXT:  while locking tuple (0,68) in relation "lab_counters"
+web-1  | ):
+web-1  |   
+web-1  | 
+web-1  | Information for cause: PG::QueryCanceled (ERROR:  canceling statement due to user request
+web-1  | CONTEXT:  while locking tuple (0,68) in relation "lab_counters"
+web-1  | ):
+web-1  |   
+web-1  | lib/lab/counter_increment.rb:18:in 'block (2 levels) in Lab::CounterIncrement#call'
+web-1  | lib/lab/counter_increment.rb:14:in 'block in Lab::CounterIncrement#call'
+web-1  | lib/lab/counter_increment.rb:13:in 'Lab::CounterIncrement#call'
+web-1  | app/controllers/lab_controller.rb:46:in 'LabController#increment'

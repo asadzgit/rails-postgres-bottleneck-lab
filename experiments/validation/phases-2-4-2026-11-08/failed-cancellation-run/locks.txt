@@ -1,0 +1,259 @@
+
+=== 2026-11-08T05:31:04Z ===
+ sampled_at | pid | usename | state | wait_event_type | wait_event | transaction_age | blocking_pids | query 
+------------+-----+---------+-------+-----------------+------------+-----------------+---------------+-------
+(0 rows)
+
+ pid  |  locktype  |      mode       | granted |         relation          
+------+------------+-----------------+---------+---------------------------
+ 5697 | relation   | AccessShareLock | t       | pg_stat_activity
+ 5697 | relation   | AccessShareLock | t       | pg_locks
+ 5697 | virtualxid | ExclusiveLock   | t       | 
+ 5697 | relation   | AccessShareLock | t       | pg_database_oid_index
+ 5697 | relation   | AccessShareLock | t       | pg_authid_oid_index
+ 5697 | relation   | AccessShareLock | t       | pg_authid
+ 5697 | relation   | AccessShareLock | t       | pg_database
+ 5697 | relation   | AccessShareLock | t       | pg_database_datname_index
+ 5697 | relation   | AccessShareLock | t       | pg_authid_rolname_index
+(9 rows)
+
+
+=== 2026-11-08T05:31:05Z ===
+          sampled_at           | pid  |  usename   |        state        | wait_event_type |  wait_event   | transaction_age |                    blocking_pids                    |                         query                          
+-------------------------------+------+------------+---------------------+-----------------+---------------+-----------------+-----------------------------------------------------+--------------------------------------------------------
+ 2026-11-08 05:31:06.049242+00 | 5699 | lab_client | idle in transaction | Client          | ClientRead    | 00:00:00.123491 | {}                                                  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049277+00 | 5704 | lab_client | active              | Lock            | transactionid | 00:00:00.076355 | {5699}                                              | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049308+00 | 5715 | lab_client | active              | Lock            | tuple         | 00:00:00.020229 | {5704}                                              | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049311+00 | 5702 | lab_client | active              | Lock            | tuple         | 00:00:00.019087 | {5704,5715}                                         | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049312+00 | 5700 | lab_client | active              | Lock            | tuple         | 00:00:00.018151 | {5704,5715,5702,5706}                               | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049313+00 | 5712 | lab_client | active              | Lock            | tuple         | 00:00:00.017691 | {5704,5715,5702,5706,5700}                          | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049315+00 | 5706 | lab_client | active              | Lock            | tuple         | 00:00:00.017655 | {5704,5715,5702}                                    | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049316+00 | 5703 | lab_client | active              | Lock            | tuple         | 00:00:00.017409 | {5704,5715,5702,5706,5700,5712}                     | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049317+00 | 5701 | lab_client | active              | Lock            | tuple         | 00:00:00.017145 | {5704,5715,5702,5706,5700,5712,5703}                | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049319+00 | 5713 | lab_client | active              | Lock            | tuple         | 00:00:00.01249  | {5704,5715,5702,5706,5700,5712,5703,5701}           | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.04932+00  | 5698 | lab_client | active              | Lock            | tuple         | 00:00:00.011584 | {5704,5715,5702,5706,5700,5712,5703,5701,5713}      | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:06.049321+00 | 5716 | lab_client | active              | Lock            | tuple         | 00:00:00.009988 | {5704,5715,5702,5706,5700,5712,5703,5701,5713,5698} | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+(12 rows)
+
+ pid  |   locktype    |        mode         | granted |         relation          
+------+---------------+---------------------+---------+---------------------------
+ 5698 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5700 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5701 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5702 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5703 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5704 | transactionid | ShareLock           | f       | 
+ 5706 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5712 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5713 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5715 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5716 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5698 | relation      | RowShareLock        | t       | lab_counters
+ 5698 | virtualxid    | ExclusiveLock       | t       | 
+ 5698 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5699 | virtualxid    | ExclusiveLock       | t       | 
+ 5699 | relation      | RowShareLock        | t       | lab_counters
+ 5699 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5699 | transactionid | ExclusiveLock       | t       | 
+ 5700 | virtualxid    | ExclusiveLock       | t       | 
+ 5700 | relation      | RowShareLock        | t       | lab_counters
+ 5700 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5701 | virtualxid    | ExclusiveLock       | t       | 
+ 5701 | relation      | RowShareLock        | t       | lab_counters
+ 5701 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5702 | relation      | RowShareLock        | t       | lab_counters
+ 5702 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5702 | virtualxid    | ExclusiveLock       | t       | 
+ 5703 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5703 | relation      | RowShareLock        | t       | lab_counters
+ 5703 | virtualxid    | ExclusiveLock       | t       | 
+ 5704 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5704 | relation      | RowShareLock        | t       | lab_counters
+ 5704 | virtualxid    | ExclusiveLock       | t       | 
+ 5704 | tuple         | AccessExclusiveLock | t       | lab_counters
+ 5706 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5706 | relation      | RowShareLock        | t       | lab_counters
+ 5706 | virtualxid    | ExclusiveLock       | t       | 
+ 5712 | relation      | RowShareLock        | t       | lab_counters
+ 5712 | virtualxid    | ExclusiveLock       | t       | 
+ 5712 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5713 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5713 | virtualxid    | ExclusiveLock       | t       | 
+ 5713 | relation      | RowShareLock        | t       | lab_counters
+ 5715 | virtualxid    | ExclusiveLock       | t       | 
+ 5715 | relation      | RowShareLock        | t       | lab_counters
+ 5715 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5716 | relation      | RowShareLock        | t       | lab_counters
+ 5716 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5716 | virtualxid    | ExclusiveLock       | t       | 
+ 5733 | relation      | AccessShareLock     | t       | pg_database_oid_index
+ 5733 | relation      | AccessShareLock     | t       | pg_database
+ 5733 | relation      | AccessShareLock     | t       | pg_authid
+ 5733 | virtualxid    | ExclusiveLock       | t       | 
+ 5733 | relation      | AccessShareLock     | t       | pg_authid_oid_index
+ 5733 | relation      | AccessShareLock     | t       | pg_authid_rolname_index
+ 5733 | relation      | AccessShareLock     | t       | pg_locks
+ 5733 | relation      | AccessShareLock     | t       | pg_database_datname_index
+ 5733 | relation      | AccessShareLock     | t       | pg_stat_activity
+(58 rows)
+
+
+=== 2026-11-08T05:31:07Z ===
+          sampled_at           | pid  |  usename   |        state        | wait_event_type |  wait_event   | transaction_age |                    blocking_pids                    |                         query                          
+-------------------------------+------+------------+---------------------+-----------------+---------------+-----------------+-----------------------------------------------------+--------------------------------------------------------
+ 2026-11-08 05:31:07.54571+00  | 5706 | lab_client | idle in transaction | Client          | ClientRead    | 00:00:00.064202 | {}                                                  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545723+00 | 5713 | lab_client | active              | Lock            | tuple         | 00:00:00.063078 | {5703,5699}                                         | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545736+00 | 5703 | lab_client | active              | Lock            | transactionid | 00:00:00.062731 | {5706}                                              | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545744+00 | 5699 | lab_client | active              | Lock            | tuple         | 00:00:00.062295 | {5703}                                              | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545745+00 | 5712 | lab_client | active              | Lock            | tuple         | 00:00:00.060903 | {5703,5699,5713}                                    | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545746+00 | 5702 | lab_client | active              | Lock            | tuple         | 00:00:00.060214 | {5703,5699,5713,5712}                               | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545748+00 | 5716 | lab_client | active              | Lock            | tuple         | 00:00:00.059945 | {5703,5699,5713,5712,5702}                          | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545749+00 | 5704 | lab_client | active              | Lock            | tuple         | 00:00:00.059468 | {5703,5699,5713,5712,5702,5716}                     | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.54575+00  | 5698 | lab_client | active              | Lock            | tuple         | 00:00:00.058375 | {5703,5699,5713,5712,5702,5716,5704}                | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545752+00 | 5700 | lab_client | active              | Lock            | tuple         | 00:00:00.058131 | {5703,5699,5713,5712,5702,5716,5704,5698}           | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545753+00 | 5715 | lab_client | active              | Lock            | tuple         | 00:00:00.019011 | {5703,5699,5713,5712,5702,5716,5704,5698,5700,5701} | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:07.545755+00 | 5701 | lab_client | active              | Lock            | tuple         | 00:00:00.01878  | {5703,5699,5713,5712,5702,5716,5704,5698,5700}      | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+(12 rows)
+
+ pid  |   locktype    |        mode         | granted |         relation          
+------+---------------+---------------------+---------+---------------------------
+ 5698 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5699 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5700 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5701 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5702 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5703 | transactionid | ShareLock           | f       | 
+ 5704 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5712 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5713 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5715 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5716 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5698 | virtualxid    | ExclusiveLock       | t       | 
+ 5698 | relation      | RowShareLock        | t       | lab_counters
+ 5698 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5699 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5699 | virtualxid    | ExclusiveLock       | t       | 
+ 5699 | relation      | RowShareLock        | t       | lab_counters
+ 5700 | relation      | RowShareLock        | t       | lab_counters
+ 5700 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5700 | virtualxid    | ExclusiveLock       | t       | 
+ 5701 | relation      | RowShareLock        | t       | lab_counters
+ 5701 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5701 | virtualxid    | ExclusiveLock       | t       | 
+ 5702 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5702 | relation      | RowShareLock        | t       | lab_counters
+ 5702 | virtualxid    | ExclusiveLock       | t       | 
+ 5703 | tuple         | AccessExclusiveLock | t       | lab_counters
+ 5703 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5703 | relation      | RowShareLock        | t       | lab_counters
+ 5703 | virtualxid    | ExclusiveLock       | t       | 
+ 5704 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5704 | relation      | RowShareLock        | t       | lab_counters
+ 5704 | virtualxid    | ExclusiveLock       | t       | 
+ 5706 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5706 | virtualxid    | ExclusiveLock       | t       | 
+ 5706 | transactionid | ExclusiveLock       | t       | 
+ 5706 | relation      | RowShareLock        | t       | lab_counters
+ 5712 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5712 | relation      | RowShareLock        | t       | lab_counters
+ 5712 | virtualxid    | ExclusiveLock       | t       | 
+ 5713 | relation      | RowShareLock        | t       | lab_counters
+ 5713 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5713 | virtualxid    | ExclusiveLock       | t       | 
+ 5715 | relation      | RowShareLock        | t       | lab_counters
+ 5715 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5715 | virtualxid    | ExclusiveLock       | t       | 
+ 5716 | virtualxid    | ExclusiveLock       | t       | 
+ 5716 | relation      | RowShareLock        | t       | lab_counters
+ 5716 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5755 | relation      | AccessShareLock     | t       | pg_database
+ 5755 | relation      | AccessShareLock     | t       | pg_database_oid_index
+ 5755 | virtualxid    | ExclusiveLock       | t       | 
+ 5755 | relation      | AccessShareLock     | t       | pg_locks
+ 5755 | relation      | AccessShareLock     | t       | pg_authid_rolname_index
+ 5755 | relation      | AccessShareLock     | t       | pg_stat_activity
+ 5755 | relation      | AccessShareLock     | t       | pg_database_datname_index
+ 5755 | relation      | AccessShareLock     | t       | pg_authid
+ 5755 | relation      | AccessShareLock     | t       | pg_authid_oid_index
+(58 rows)
+
+
+=== 2026-11-08T05:31:08Z ===
+          sampled_at           | pid  |  usename   |        state        | wait_event_type |  wait_event   | transaction_age |                    blocking_pids                    |                         query                          
+-------------------------------+------+------------+---------------------+-----------------+---------------+-----------------+-----------------------------------------------------+--------------------------------------------------------
+ 2026-11-08 05:31:09.009549+00 | 5713 | lab_client | idle in transaction | Client          | ClientRead    | 00:00:00.090523 | {}                                                  | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009562+00 | 5704 | lab_client | active              | Lock            | transactionid | 00:00:00.085954 | {5713}                                              | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009573+00 | 5701 | lab_client | active              | Lock            | tuple         | 00:00:00.084637 | {5704,5703}                                         | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.00958+00  | 5703 | lab_client | active              | Lock            | tuple         | 00:00:00.082496 | {5704}                                              | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009582+00 | 5698 | lab_client | active              | Lock            | tuple         | 00:00:00.081251 | {5704,5703,5701,5706,5712}                          | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009583+00 | 5702 | lab_client | active              | Lock            | tuple         | 00:00:00.0751   | {5704,5703,5701,5706,5712,5698}                     | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009585+00 | 5700 | lab_client | active              | Lock            | tuple         | 00:00:00.074748 | {5704,5703,5701,5706,5712,5698,5702,5716,5699}      | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009586+00 | 5699 | lab_client | active              | Lock            | tuple         | 00:00:00.074365 | {5704,5703,5701,5706,5712,5698,5702,5716}           | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009588+00 | 5716 | lab_client | active              | Lock            | tuple         | 00:00:00.072828 | {5704,5703,5701,5706,5712,5698,5702}                | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009589+00 | 5715 | lab_client | active              | Lock            | tuple         | 00:00:00.071514 | {5704,5703,5701,5706,5712,5698,5702,5716,5699,5700} | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.00959+00  | 5706 | lab_client | active              | Lock            | tuple         | 00:00:00.040378 | {5704,5703,5701}                                    | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+ 2026-11-08 05:31:09.009592+00 | 5712 | lab_client | active              | Lock            | tuple         | 00:00:00.040131 | {5704,5703,5701,5706}                               | SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+(12 rows)
+
+ pid  |   locktype    |        mode         | granted |         relation          
+------+---------------+---------------------+---------+---------------------------
+ 5698 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5699 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5700 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5701 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5702 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5703 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5704 | transactionid | ShareLock           | f       | 
+ 5706 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5712 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5715 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5716 | tuple         | AccessExclusiveLock | f       | lab_counters
+ 5698 | virtualxid    | ExclusiveLock       | t       | 
+ 5698 | relation      | RowShareLock        | t       | lab_counters
+ 5698 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5699 | relation      | RowShareLock        | t       | lab_counters
+ 5699 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5699 | virtualxid    | ExclusiveLock       | t       | 
+ 5700 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5700 | virtualxid    | ExclusiveLock       | t       | 
+ 5700 | relation      | RowShareLock        | t       | lab_counters
+ 5701 | virtualxid    | ExclusiveLock       | t       | 
+ 5701 | relation      | RowShareLock        | t       | lab_counters
+ 5701 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5702 | virtualxid    | ExclusiveLock       | t       | 
+ 5702 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5702 | relation      | RowShareLock        | t       | lab_counters
+ 5703 | virtualxid    | ExclusiveLock       | t       | 
+ 5703 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5703 | relation      | RowShareLock        | t       | lab_counters
+ 5704 | relation      | RowShareLock        | t       | lab_counters
+ 5704 | virtualxid    | ExclusiveLock       | t       | 
+ 5704 | tuple         | AccessExclusiveLock | t       | lab_counters
+ 5704 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5706 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5706 | relation      | RowShareLock        | t       | lab_counters
+ 5706 | virtualxid    | ExclusiveLock       | t       | 
+ 5712 | relation      | RowShareLock        | t       | lab_counters
+ 5712 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5712 | virtualxid    | ExclusiveLock       | t       | 
+ 5713 | transactionid | ExclusiveLock       | t       | 
+ 5713 | virtualxid    | ExclusiveLock       | t       | 
+ 5713 | relation      | RowShareLock        | t       | lab_counters
+ 5713 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5715 | virtualxid    | ExclusiveLock       | t       | 
+ 5715 | relation      | RowShareLock        | t       | lab_counters
+ 5715 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5716 | relation      | RowShareLock        | t       | lab_counters_pkey
+ 5716 | relation      | RowShareLock        | t       | lab_counters
+ 5716 | virtualxid    | ExclusiveLock       | t       | 
+ 5777 | virtualxid    | ExclusiveLock       | t       | 
+ 5777 | relation      | AccessShareLock     | t       | pg_stat_activity
+ 5777 | relation      | AccessShareLock     | t       | pg_database
+ 5777 | relation      | AccessShareLock     | t       | pg_database_datname_index
+ 5777 | relation      | AccessShareLock     | t       | pg_authid_rolname_index
+ 5777 | relation      | AccessShareLock     | t       | pg_authid_oid_index
+ 5777 | relation      | AccessShareLock     | t       | pg_database_oid_index
+ 5777 | relation      | AccessShareLock     | t       | pg_locks
+ 5777 | relation      | AccessShareLock     | t       | pg_authid
+(58 rows)
+

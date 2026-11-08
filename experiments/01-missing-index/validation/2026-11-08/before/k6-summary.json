@@ -1,0 +1,147 @@
+{
+    "metrics": {
+        "checks": {
+            "passes": 1656,
+            "fails": 0,
+            "thresholds": {
+                "rate==1": false
+            },
+            "value": 1
+        },
+        "http_req_receiving": {
+            "p(95)": 1.2143477999999934,
+            "avg": 0.2973241249999999,
+            "min": 0.018688,
+            "med": 0.09334600000000001,
+            "max": 25.096489,
+            "p(90)": 0.18227390000000002
+        },
+        "iteration_duration": {
+            "avg": 91.08734973913043,
+            "min": 38.187947,
+            "med": 88.85474049999999,
+            "max": 210.313054,
+            "p(90)": 118.43747930000004,
+            "p(95)": 136.78842014999972
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 552,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_connecting": {
+            "avg": 0.006616365942028985,
+            "min": 0,
+            "med": 0,
+            "max": 1.476395,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "data_received": {
+            "count": 1493812,
+            "rate": 148022.06549483762
+        },
+        "http_reqs": {
+            "count": 552,
+            "rate": 54.697766622004885
+        },
+        "http_req_tls_handshaking": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "http_req_waiting": {
+            "med": 88.13137900000001,
+            "max": 209.849805,
+            "p(90)": 118.17156890000003,
+            "p(95)": 136.4932944999997,
+            "avg": 90.26936663586955,
+            "min": 37.743968
+        },
+        "data_sent": {
+            "count": 51827,
+            "rate": 5135.5455628961
+        },
+        "http_req_duration": {
+            "avg": 90.58808596920281,
+            "min": 37.875105,
+            "med": 88.4808655,
+            "max": 209.993573,
+            "p(90)": 118.24124810000002,
+            "p(95)": 136.56823709999972
+        },
+        "http_req_sending": {
+            "med": 0.013085,
+            "max": 2.548756,
+            "p(90)": 0.024258000000000016,
+            "p(95)": 0.031986499999999994,
+            "avg": 0.02139520833333335,
+            "min": 0.005208
+        },
+        "iterations": {
+            "rate": 54.697766622004885,
+            "count": 552
+        },
+        "vus_max": {
+            "value": 5,
+            "min": 5,
+            "max": 5
+        },
+        "http_req_blocked": {
+            "p(95)": 0.005918499999999992,
+            "avg": 0.022954280797101476,
+            "min": 0.001332,
+            "med": 0.003475,
+            "max": 2.178373,
+            "p(90)": 0.005137
+        },
+        "vus": {
+            "min": 5,
+            "max": 5,
+            "value": 5
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(95)": 136.56823709999972,
+            "avg": 90.58808596920281,
+            "min": 37.875105,
+            "med": 88.4808655,
+            "max": 209.993573,
+            "p(90)": 118.24124810000002
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "HTTP 200": {
+                    "id": "b70aee8a9f7a77d66dd70844a901558a",
+                    "passes": 552,
+                    "fails": 0,
+                    "name": "HTTP 200",
+                    "path": "::HTTP 200"
+                },
+                "bounded orders from requested customer": {
+                    "name": "bounded orders from requested customer",
+                    "path": "::bounded orders from requested customer",
+                    "id": "043cd0337108f1666c6ccaece947f778",
+                    "passes": 552,
+                    "fails": 0
+                },
+                "most recent first, stable ties": {
+                    "passes": 552,
+                    "fails": 0,
+                    "name": "most recent first, stable ties",
+                    "path": "::most recent first, stable ties",
+                    "id": "47eabb23e13f29c0fa20314eccb9ee63"
+                }
+            },
+        "name": "",
+        "path": ""
+    }
+}

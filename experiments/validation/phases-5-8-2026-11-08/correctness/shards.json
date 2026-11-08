@@ -1,0 +1,19 @@
+{
+  "mode": "shards",
+  "observed_at": "2026-11-08T06:56:00Z",
+  "single": {
+    "count": 1000000,
+    "total_cents": 50099500000,
+    "shards": [
+      "single"
+    ]
+  },
+  "sharded": {
+    "count": 1000000,
+    "total_cents": 50099500000,
+    "shards": [
+      "a",
+      "b"
+    ]
+  }
+}

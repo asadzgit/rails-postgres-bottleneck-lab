@@ -1,0 +1,67 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /experiments/advanced/workload.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 32s max duration (incl. graceful stop):
+              * default: 5 looping VUs for 2s (gracefulStop: 30s)
+
+
+running (01.0s), 5/5 VUs, 195 complete and 0 interrupted iterations
+default   [  50% ] 5 VUs  1.0s/2s
+
+running (02.0s), 5/5 VUs, 497 complete and 0 interrupted iterations
+default   [ 100% ] 5 VUs  2s
+
+
+  █ THRESHOLDS 
+
+    cache_backend_unavailable
+    ✓ 'rate==0' rate=0.00%
+
+    checks
+    ✓ 'rate==1' rate=100.00%
+
+    http_req_failed
+    ✓ 'rate==0' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 502     250.016655/s
+    checks_succeeded...................: 100.00% 502 out of 502
+    checks_failed......................: 0.00%   0 out of 502
+
+    ✓ HTTP and dataset/route invariants
+
+    CUSTOM
+    cache_backend_unavailable...............................................: 0.00%  0 out of 502
+    cache_hits..............................................................: 0.00%  0 out of 502
+
+    HTTP
+    http_req_duration.......................................................: avg=19.74ms min=7.93ms med=16.1ms  max=128.76ms p(90)=26.11ms p(95)=45.88ms
+      { expected_response:true }............................................: avg=19.74ms min=7.93ms med=16.1ms  max=128.76ms p(90)=26.11ms p(95)=45.88ms
+    http_req_failed.........................................................: 0.00%  0 out of 502
+    http_reqs...............................................................: 502    250.016655/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=19.95ms min=8.05ms med=16.24ms max=130.39ms p(90)=26.5ms  p(95)=45.97ms
+    iterations..............................................................: 502    250.016655/s
+    vus.....................................................................: 5      min=5        max=5
+    vus_max.................................................................: 5      min=5        max=5
+
+    NETWORK
+    data_received...........................................................: 271 kB 135 kB/s
+    data_sent...............................................................: 58 kB  29 kB/s
+
+
+
+
+running (02.0s), 0/5 VUs, 502 complete and 0 interrupted iterations
+default ✓ [ 100% ] 5 VUs  2s

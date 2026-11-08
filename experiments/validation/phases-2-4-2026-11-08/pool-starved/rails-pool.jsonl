@@ -1,0 +1,5 @@
+{"size":2,"connections":0,"busy":0,"dead":0,"idle":0,"waiting":0,"checkout_timeout":0.05}
+{"size":2,"connections":2,"busy":2,"dead":0,"idle":0,"waiting":0,"checkout_timeout":0.05}
+{"size":2,"connections":2,"busy":2,"dead":0,"idle":0,"waiting":9,"checkout_timeout":0.05}
+{"size":2,"connections":2,"busy":2,"dead":0,"idle":0,"waiting":5,"checkout_timeout":0.05}
+{"size":2,"connections":2,"busy":0,"dead":0,"idle":2,"waiting":0,"checkout_timeout":0.05}

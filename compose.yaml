@@ -1,0 +1,216 @@
+name: rails-postgres-bottleneck-lab
+
+services:
+  db:
+    image: postgres:17-bookworm@sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994
+    cpus: "${PG_CPUS:-2.0}"
+    mem_limit: "${PG_MEMORY:-1g}"
+    shm_size: "${PG_SHM_SIZE:-256m}"
+    environment:
+      POSTGRES_USER: rails
+      POSTGRES_DB: rails_postgres_bottleneck_lab_development
+      # Private local laboratory only; no host database port is exposed.
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command:
+      - postgres
+      - -c
+      - shared_preload_libraries=pg_stat_statements
+      - -c
+      - pg_stat_statements.track=all
+      - -c
+      - track_io_timing=on
+      - -c
+      - compute_query_id=on
+      - -c
+      - shared_buffers=${PG_SHARED_BUFFERS:-128MB}
+      - -c
+      - max_connections=${PG_MAX_CONNECTIONS:-100}
+      - -c
+      - hba_file=/etc/postgresql/lab_hba.conf
+      - -c
+      - wal_level=replica
+      - -c
+      - max_wal_senders=8
+      - -c
+      - wal_keep_size=128MB
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/replica/pg_hba.conf:/etc/postgresql/lab_hba.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rails -d rails_postgres_bottleneck_lab_development"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  web:
+    image: ruby:3.4-bookworm@sha256:d7c312a48736dd291d7ce043c847f04dfde9bdf7334491ca6a545a4a184395be
+    user: "${LAB_UID:-1000}:${LAB_GID:-1000}"
+    working_dir: /app
+    environment:
+      HOME: /tmp
+      GEM_HOME: /gems
+      GEM_PATH: /gems
+      BUNDLE_JOBS: "4"
+      BUNDLE_FROZEN: "${BUNDLE_FROZEN:-true}"
+      SSL_CERT_FILE: /run/ca-bundle.pem
+      GIT_SSL_CAINFO: /run/ca-bundle.pem
+      PGHOST: "${LAB_DB_HOST:-db}"
+      PGPORT: "${LAB_DB_PORT:-5432}"
+      PGUSER: "${LAB_DB_USER:-rails}"
+      PGBOUNCER: "${PGBOUNCER:-0}"
+      REDIS_URL: redis://redis:6379/0
+      DB_POOL: "${DB_POOL:-5}"
+      DB_CHECKOUT_TIMEOUT: "${DB_CHECKOUT_TIMEOUT:-2}"
+      LAB_EXPERIMENT_ENDPOINTS: "${LAB_EXPERIMENT_ENDPOINTS:-0}"
+      RAILS_ENV: "${RAILS_ENV:-development}"
+      RAILS_MAX_THREADS: "${RAILS_MAX_THREADS:-5}"
+      WEB_CONCURRENCY: "${WEB_CONCURRENCY:-0}"
+      PG_STATEMENT_TIMEOUT: "${PG_STATEMENT_TIMEOUT:-10000}"
+    volumes:
+      - .:/app
+      - ./.bundle/gems:/gems
+      - ${LAB_CA_BUNDLE:-/etc/ssl/certs/ca-certificates.crt}:/run/ca-bundle.pem:ro
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/up"]
+      interval: 3s
+      timeout: 5s
+      start_period: 10s
+      retries: 20
+    command: ["bash", "-c", "rm -f tmp/pids/server.pid && exec bundle exec rails server -b 0.0.0.0"]
+
+  k6:
+    image: grafana/k6:1.0.0@sha256:f21270290d702cbf0a7d6ba5d7ed100b63bcb233b558b885ed787547b3488279
+    profiles: ["tools"]
+    user: "${LAB_UID:-1000}:${LAB_GID:-1000}"
+    environment:
+      BASE_URL: http://web:3000
+      NO_PROXY: "${NO_PROXY:-localhost,127.0.0.1},web,db"
+      no_proxy: "${NO_PROXY:-localhost,127.0.0.1},web,db"
+      K6_VUS: "${K6_VUS:-10}"
+      K6_DURATION: "${K6_DURATION:-30s}"
+      CUSTOMER_COUNT: "${CUSTOMER_COUNT:-10000}"
+      ORDER_LIMIT: "${ORDER_LIMIT:-20}"
+    volumes:
+      - ./experiments/01-missing-index:/scripts:ro
+      - ./results:/results
+      - ./experiments:/experiments:ro
+
+  pgbouncer:
+    image: rails-lab-pgbouncer:local
+    profiles: ["pooling"]
+    build:
+      context: .
+      dockerfile: docker/pgbouncer/Dockerfile
+      secrets: [proxy_ca]
+    environment:
+      PGBOUNCER_POOL_SIZE: "${PGBOUNCER_POOL_SIZE:-4}"
+    volumes:
+      - ./docker/pgbouncer:/etc/pgbouncer:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "psql", "-h", "127.0.0.1", "-p", "6432", "-U", "rails", "-d", "pgbouncer", "-c", "SHOW VERSION;"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  redis:
+    image: redis:7.4-bookworm@sha256:2e3eb11462c4e3759e6972678dd051d150ff54b1e60714b3c33b701260172a90
+    profiles: ["cache"]
+    command: ["redis-server", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  replica:
+    image: postgres:17-bookworm@sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994
+    profiles: ["replication"]
+    entrypoint: ["bash", "/lab-replica/start.sh"]
+    volumes:
+      - replica_data:/var/lib/postgresql/data
+      - ./docker/replica:/lab-replica:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "psql -U rails -d rails_postgres_bottleneck_lab_development -Atc 'SELECT pg_is_in_recovery()' | grep -qx t"]
+      interval: 2s
+      timeout: 5s
+      retries: 60
+
+  shard-a: &shard
+    image: postgres:17-bookworm@sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994
+    profiles: ["shards"]
+    environment:
+      POSTGRES_USER: rails
+      POSTGRES_DB: lab_shard
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command: ["postgres", "-c", "shared_preload_libraries=pg_stat_statements", "-c", "track_io_timing=on"]
+    cpus: "${SHARD_CPUS:-1.0}"
+    mem_limit: "${SHARD_MEMORY:-512m}"
+    volumes:
+      - shard_a_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rails -d lab_shard"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  shard-b:
+    <<: *shard
+    volumes:
+      - shard_b_data:/var/lib/postgresql/data
+
+  prometheus:
+    image: prom/prometheus@sha256:e04987641b57704f408e31f6373ba4138ecf27cb4a165d24aabb6c38fddd0f06
+    profiles: ["observability"]
+    environment:
+      NO_PROXY: "${NO_PROXY:-localhost,127.0.0.1},web,prometheus"
+      no_proxy: "${NO_PROXY:-localhost,127.0.0.1},web,prometheus"
+    volumes:
+      - ./docker/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=2d"]
+
+  grafana:
+    image: grafana/grafana@sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205
+    profiles: ["observability"]
+    environment:
+      NO_PROXY: "${NO_PROXY:-localhost,127.0.0.1},web,prometheus"
+      no_proxy: "${NO_PROXY:-localhost,127.0.0.1},web,prometheus"
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_AUTH_BASIC_ENABLED: "false"
+      GF_AUTH_DISABLE_LOGIN_FORM: "true"
+      GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION: "true"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./docker/monitoring/provisioning:/etc/grafana/provisioning:ro
+      - ./docker/monitoring/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "127.0.0.1:3001:3000"
+
+secrets:
+  proxy_ca:
+    file: ${LAB_CA_BUNDLE:-/etc/ssl/certs/ca-certificates.crt}
+
+volumes:
+  pgdata:
+    external: true
+    name: rails-lab-pgdata
+
+  replica_data:
+  shard_a_data:
+  shard_b_data:
+  prometheus_data:
+  grafana_data:

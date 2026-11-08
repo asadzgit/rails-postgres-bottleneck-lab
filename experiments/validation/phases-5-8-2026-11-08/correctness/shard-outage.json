@@ -1,0 +1,11 @@
+{
+  "mode": "shard-outage",
+  "observed_at": "2026-11-08T06:56:05Z",
+  "healthy_owner": "a",
+  "failed_owner": {
+    "error": "shard_unavailable",
+    "shard": "b",
+    "partial_result": false
+  },
+  "aggregate_status": 503
+}

@@ -1,0 +1,3 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+-2914826383223362791,1,0.107,0.107,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()
+-6883023751393440299,4,0.023,0.006,0.001,4,0,0,0,0,SELECT pg_is_in_recovery()

@@ -1,0 +1,67 @@
+2026-11-08T06:47:58Z
+scenario=read-primary
+vus=5
+duration=5s
+threads=10
+pool=10
+cache_ttl=30
+cache_work_ms=20
+expected_version=1
+expected_count=0
+expected_total=0
+git_revision=8b920c9f469bbc9208fa9ad692d2561909bf5173
+ M README.md
+?? .dockerignore
+?? .env.example
+?? .github/
+?? .gitignore
+?? .rubocop.yml
+?? .ruby-version
+?? AGENTS.md
+?? Gemfile
+?? Gemfile.lock
+?? LICENSE
+?? Rakefile
+?? app/
+?? bin/
+?? compose.yaml
+?? config.ru
+?? config/
+?? db/
+?? docker/
+?? docs/
+?? experiments/
+?? lib/
+?? log/
+?? public/
+?? results/
+?? script/
+?? storage/
+?? test/
+?? tmp/
+?? vendor/
+d277421493e9e873951c7bb84cabba02313acede7d7e1699c3d45e3c25db464d  Gemfile.lock
+863d10bbd281d234c8899c45f7030473fd6e8036c2690b3cf3dfc92d0a2219a2  compose.yaml
+a50b0d10acba1eb1a0b298105375bf0a04a15e1e4e331f81fcd9845016a873bc  app/controllers/advanced_lab_controller.rb
+2bb67374b1603382a04743fc7ab83b8e3460c14823656d4b2a4a8c3db3585a84  lib/lab/cache.rb
+29a6f258568d8da95c7d29e7eaa2b15fc6e521ec56d3714991ac9d162fdf905c  lib/lab/replica.rb
+e4b163ed7120e8d5396cbd30b457b6296aba154eaa01eecdecf63ee2362e15d7  lib/lab/partitions.rb
+0fea13d1a659c6bdde1f9f0f954a15c7579561fd350a33e549f6f948883f41a2  lib/lab/shards.rb
+0fc53574e27b89c084786fa738f3f0136da5aba21ee8b4a7468e593f6760e69a  experiments/advanced/workload.js
+cgroup_driver=none
+primary_image=sha256:018dbecf6a31cfed1f83c218b5e428a52ac389ad46e495f72831641db49d85a9 cpu=0 memory=0
+                                                           version                                                            
+------------------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 17.11 (Debian 17.11-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+(1 row)
+
+ shared_buffers 
+----------------
+ 128MB
+(1 row)
+
+ max_connections 
+-----------------
+ 100
+(1 row)
+

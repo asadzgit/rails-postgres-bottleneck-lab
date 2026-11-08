@@ -1,0 +1,20 @@
+ application_name |   state   |  sent_lsn  | write_lsn  | flush_lsn  | replay_lsn 
+------------------+-----------+------------+------------+------------+------------
+ walreceiver      | streaming | 0/23F39E98 | 0/23F39E98 | 0/23F39E98 | 0/23F39E98
+(1 row)
+
+ application_name |   state   |  sent_lsn  | write_lsn  | flush_lsn  | replay_lsn 
+------------------+-----------+------------+------------+------------+------------
+ walreceiver      | streaming | 0/23F39ED0 | 0/23F39ED0 | 0/23F39ED0 | 0/23F39ED0
+(1 row)
+
+ application_name |   state   |  sent_lsn  | write_lsn  | flush_lsn  | replay_lsn 
+------------------+-----------+------------+------------+------------+------------
+ walreceiver      | streaming | 0/23F39ED0 | 0/23F39ED0 | 0/23F39ED0 | 0/23F39ED0
+(1 row)
+
+ application_name |   state   |  sent_lsn  | write_lsn  | flush_lsn  | replay_lsn 
+------------------+-----------+------------+------------+------------+------------
+ walreceiver      | streaming | 0/23F39ED0 | 0/23F39ED0 | 0/23F39ED0 | 0/23F39ED0
+(1 row)
+

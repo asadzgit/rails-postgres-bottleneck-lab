@@ -1,0 +1,1126 @@
+db-1  | 2026-11-08 05:33:38.592 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.592 UTC [6417] CONTEXT:  while locking tuple (0,2) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.592 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.592 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.592 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.594 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.594 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.596 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.596 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.596 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.596 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.596 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.596 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.596 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.596 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.597 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.597 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.597 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.597 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.597 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.597 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.643 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.643 UTC [6426] CONTEXT:  while locking tuple (0,2) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.643 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.702 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.702 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.702 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.702 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.703 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.703 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.703 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.703 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.703 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.703 UTC [6419] CONTEXT:  while locking tuple (0,3) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.703 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.703 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.703 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.703 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.703 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.704 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.704 UTC [6428] CONTEXT:  while locking updated version (0,3) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.704 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.712 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.712 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.713 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.713 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.754 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.754 UTC [6426] CONTEXT:  while locking tuple (0,3) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.754 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6428] CONTEXT:  while locking tuple (0,4) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.810 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.810 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.810 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.811 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.811 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.861 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.861 UTC [6423] CONTEXT:  while locking tuple (0,4) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.861 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.913 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.913 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.913 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.913 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.913 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.913 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.915 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.915 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.915 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.915 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.915 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.915 UTC [6425] CONTEXT:  while locking updated version (0,5) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.915 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.916 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.916 UTC [6422] CONTEXT:  while locking tuple (0,5) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.916 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.916 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.916 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.916 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.916 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.920 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.920 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:38.966 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:38.966 UTC [6418] CONTEXT:  while locking tuple (0,5) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:38.966 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6417] CONTEXT:  while locking tuple (0,6) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.020 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.020 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.020 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.071 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.071 UTC [6426] CONTEXT:  while locking tuple (0,6) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.071 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.123 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.123 UTC [6420] CONTEXT:  while locking tuple (0,7) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.123 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.123 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.123 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.123 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.123 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.123 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.123 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.124 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.124 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.124 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.124 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.124 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.124 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.124 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.124 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.124 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.124 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.125 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.125 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.174 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.174 UTC [6426] CONTEXT:  while locking tuple (0,7) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.174 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6428] CONTEXT:  while locking tuple (0,8) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.228 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.228 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.228 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.229 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.229 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.229 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.229 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.230 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.230 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.278 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.278 UTC [6425] CONTEXT:  while locking tuple (0,8) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.278 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6419] CONTEXT:  while locking tuple (0,9) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.332 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.332 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.332 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.333 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.333 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.333 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.333 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.334 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.334 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.383 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.383 UTC [6420] CONTEXT:  while locking tuple (0,9) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.383 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.435 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.435 UTC [6425] CONTEXT:  while locking tuple (0,10) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.435 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.435 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.435 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.435 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.435 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.435 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.435 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.435 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.435 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.435 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.435 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.436 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.436 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.436 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.436 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.436 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.436 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.437 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.437 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.486 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.486 UTC [6424] CONTEXT:  while locking tuple (0,10) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.486 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.537 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.537 UTC [6420] CONTEXT:  while locking tuple (0,11) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.537 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.537 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.537 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.537 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.537 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.538 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.538 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.538 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.538 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.538 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.538 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.538 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.538 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.538 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.538 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.539 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.539 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.539 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.539 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.587 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.587 UTC [6426] CONTEXT:  while locking tuple (0,11) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.587 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6422] CONTEXT:  while locking tuple (0,12) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.641 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.641 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.641 UTC [6426] CONTEXT:  while locking updated version (0,12) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.641 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.642 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.642 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.642 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.642 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.642 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.642 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.642 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.642 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6420] CONTEXT:  while locking tuple (0,13) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.744 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.744 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.744 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.746 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.746 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.747 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.747 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.780 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.780 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.794 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.794 UTC [6418] CONTEXT:  while locking tuple (0,13) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.794 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.852 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.852 UTC [6424] CONTEXT:  while locking tuple (0,14) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.852 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.852 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.852 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.852 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.852 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.852 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.852 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.852 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.852 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.852 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.852 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.853 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.853 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.853 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.853 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.853 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.853 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.853 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.853 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.903 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.903 UTC [6417] CONTEXT:  while locking tuple (0,14) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.903 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.954 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.954 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.954 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.954 UTC [6425] CONTEXT:  while locking tuple (0,15) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:39.954 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.955 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.955 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.955 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.955 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.955 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.955 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.955 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.955 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.955 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.955 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.955 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.955 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.959 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.959 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:39.959 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:39.959 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.004 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.004 UTC [6426] CONTEXT:  while locking tuple (0,15) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.004 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.059 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.059 UTC [6421] CONTEXT:  while locking tuple (0,16) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.059 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.059 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.059 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.059 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.059 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6426] CONTEXT:  while locking updated version (0,16) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.060 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.060 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.060 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.161 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.161 UTC [6425] CONTEXT:  while locking tuple (0,17) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.161 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.162 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.162 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.163 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.163 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.163 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.163 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.212 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.212 UTC [6417] CONTEXT:  while locking tuple (0,17) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.212 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6422] CONTEXT:  while locking tuple (0,18) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.265 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.265 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.265 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.266 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.266 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.267 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.267 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.315 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.315 UTC [6425] CONTEXT:  while locking tuple (0,18) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.315 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6417] CONTEXT:  while locking tuple (0,19) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.367 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.367 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.367 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.368 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.368 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.369 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.369 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.417 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.417 UTC [6421] CONTEXT:  while locking tuple (0,19) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.417 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6428] CONTEXT:  while locking tuple (0,20) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.469 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.469 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.469 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.470 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.470 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.471 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.471 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.520 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.520 UTC [6426] CONTEXT:  while locking tuple (0,20) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.520 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.571 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.571 UTC [6421] CONTEXT:  while locking tuple (0,21) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.571 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.571 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.571 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.571 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.571 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.571 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.571 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.571 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.571 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.571 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.571 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.572 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.572 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.572 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.572 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.572 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.572 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.573 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.573 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.622 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.622 UTC [6426] CONTEXT:  while locking tuple (0,21) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.622 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.674 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.674 UTC [6425] CONTEXT:  while locking tuple (0,22) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.674 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.674 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.674 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.675 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.675 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.677 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.677 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.726 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.726 UTC [6426] CONTEXT:  while locking tuple (0,22) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.726 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.778 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.778 UTC [6419] CONTEXT:  while locking tuple (0,23) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.778 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.778 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.778 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.778 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.778 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.778 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.778 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.778 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.778 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.779 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.779 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.779 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.779 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.779 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.779 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.779 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.779 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.780 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.780 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.829 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.829 UTC [6427] CONTEXT:  while locking tuple (0,23) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.829 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.883 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.883 UTC [6418] CONTEXT:  while locking tuple (0,24) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.883 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.883 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.883 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.883 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.883 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.884 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.884 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.884 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.884 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.884 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.884 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.884 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.884 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.884 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.884 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.884 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.884 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.886 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.886 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.935 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.935 UTC [6427] CONTEXT:  while locking tuple (0,24) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.935 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.986 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.986 UTC [6424] CONTEXT:  while locking tuple (0,25) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:40.986 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.986 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.986 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.987 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.987 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:40.988 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:40.988 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.037 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.037 UTC [6428] CONTEXT:  while locking tuple (0,25) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.037 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.091 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.091 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.091 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.091 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.092 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.092 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.092 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.092 UTC [6427] CONTEXT:  while locking tuple (0,26) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.092 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.092 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.092 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.092 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.092 UTC [6420] CONTEXT:  while locking updated version (0,26) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.092 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.093 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.093 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.093 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.093 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.095 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.095 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.097 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.097 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.143 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.143 UTC [6424] CONTEXT:  while locking tuple (0,26) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.143 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6420] CONTEXT:  while locking tuple (0,27) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.197 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.197 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.197 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.198 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.198 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.198 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.198 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.199 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.199 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.303 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.303 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.303 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.303 UTC [6422] CONTEXT:  while locking tuple (0,28) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.303 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.304 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.304 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.304 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.304 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.304 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.304 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.304 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.304 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.305 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.305 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.305 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.305 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.305 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.305 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.305 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.305 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.354 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.354 UTC [6425] CONTEXT:  while locking tuple (0,28) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.354 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.405 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.405 UTC [6417] CONTEXT:  while locking tuple (0,29) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.405 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.405 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.405 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.406 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.406 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.412 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.412 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.457 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.457 UTC [6418] CONTEXT:  while locking tuple (0,29) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.457 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.511 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.511 UTC [6425] CONTEXT:  while locking tuple (0,30) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.511 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.511 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.511 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.511 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.511 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.511 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.511 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.511 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.511 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.512 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.512 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.512 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.512 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.512 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.512 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.512 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.512 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.513 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.513 UTC [6418] CONTEXT:  while locking updated version (0,30) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.513 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.562 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.562 UTC [6421] CONTEXT:  while locking tuple (0,30) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.562 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.614 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.614 UTC [6427] CONTEXT:  while locking tuple (0,31) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.614 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.614 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.614 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.615 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.615 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.616 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.616 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.616 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.616 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.616 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.616 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.616 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.616 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.616 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.616 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.616 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.616 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.617 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.617 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.664 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.664 UTC [6428] CONTEXT:  while locking tuple (0,31) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.664 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.718 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.718 UTC [6428] CONTEXT:  while locking tuple (0,32) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.718 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.719 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.719 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.720 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.720 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.721 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.721 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.724 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.724 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.725 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.725 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.725 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.725 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.725 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.725 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.725 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.725 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.725 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.725 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.768 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.768 UTC [6421] CONTEXT:  while locking tuple (0,32) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.768 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.821 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.821 UTC [6418] CONTEXT:  while locking tuple (0,33) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.821 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.824 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.824 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.824 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.824 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.824 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.824 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.824 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.824 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.825 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.825 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.825 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.825 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.825 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.825 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.825 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.825 UTC [6421] CONTEXT:  while locking updated version (0,33) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.825 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.825 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.825 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.872 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.872 UTC [6424] CONTEXT:  while locking tuple (0,33) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.872 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6428] CONTEXT:  while locking tuple (0,34) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.925 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.925 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.925 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:41.975 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:41.975 UTC [6420] CONTEXT:  while locking tuple (0,34) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:41.975 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.027 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.027 UTC [6423] CONTEXT:  while locking tuple (0,35) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.027 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.027 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.027 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.028 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.028 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.029 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.029 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.078 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.078 UTC [6427] CONTEXT:  while locking tuple (0,35) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.078 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6428] CONTEXT:  while locking tuple (0,36) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.131 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.131 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.131 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.132 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.132 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6424] CONTEXT:  while locking tuple (0,37) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.234 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.234 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.234 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.235 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.235 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.285 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.285 UTC [6421] CONTEXT:  while locking tuple (0,37) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.285 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.336 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.336 UTC [6418] CONTEXT:  while locking tuple (0,38) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.336 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.336 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.336 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.336 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.336 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.337 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.337 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.337 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.337 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.337 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.337 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.337 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.337 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.337 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.337 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.338 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.338 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.338 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.338 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.387 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.387 UTC [6417] CONTEXT:  while locking tuple (0,38) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.387 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6421] CONTEXT:  while locking tuple (0,39) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.438 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.438 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.438 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.441 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.441 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.488 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.488 UTC [6417] CONTEXT:  while locking tuple (0,39) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.488 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.540 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.540 UTC [6422] CONTEXT:  while locking tuple (0,40) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.540 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.540 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.540 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.540 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.540 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.540 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.540 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.540 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.540 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.541 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.541 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.541 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.541 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.541 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.541 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.541 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.541 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.542 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.542 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.591 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.591 UTC [6420] CONTEXT:  while locking tuple (0,40) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.591 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6421] CONTEXT:  while locking tuple (0,41) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.643 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.643 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.643 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.645 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.645 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.646 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.646 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.745 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.745 UTC [6425] CONTEXT:  while locking tuple (0,42) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.745 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.745 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.745 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.745 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.745 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.745 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.745 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.746 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.746 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.746 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.746 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.746 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.746 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.746 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.746 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.746 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.746 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.746 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.746 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.797 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.797 UTC [6417] CONTEXT:  while locking tuple (0,42) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.797 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.847 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.847 UTC [6419] CONTEXT:  while locking tuple (0,43) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.847 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.847 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.847 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.847 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.847 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.848 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.848 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.848 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.848 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.848 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.848 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.848 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.848 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.848 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.848 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.850 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.850 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.852 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.852 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.900 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.900 UTC [6420] CONTEXT:  while locking tuple (0,43) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.900 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.950 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.950 UTC [6424] CONTEXT:  while locking tuple (0,44) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:42.950 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.951 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.951 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.952 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.952 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:42.957 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:42.957 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.004 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.004 UTC [6420] CONTEXT:  while locking tuple (0,44) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.004 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.054 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.054 UTC [6422] CONTEXT:  while locking tuple (0,45) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.054 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.054 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.054 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.054 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.054 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.054 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.054 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.054 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.054 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.054 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.054 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.055 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.055 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.055 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.055 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.055 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.055 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.056 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.056 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.105 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.105 UTC [6417] CONTEXT:  while locking tuple (0,45) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.105 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.160 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.160 UTC [6427] CONTEXT:  while locking tuple (0,46) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.160 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.160 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.160 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.160 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.160 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.160 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.160 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.161 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.161 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.161 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.161 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.161 UTC [6423] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.161 UTC [6423] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.161 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.161 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.161 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.161 UTC [6417] CONTEXT:  while locking updated version (0,46) of tuple in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.161 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.162 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.162 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.162 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.162 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.264 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.264 UTC [6418] CONTEXT:  while locking tuple (0,47) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.264 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.264 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.264 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.264 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.264 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.264 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.264 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.264 UTC [6417] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.264 UTC [6417] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.264 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.264 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.265 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.265 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.265 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.265 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.265 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.265 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.265 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.265 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.265 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.265 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6420] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6420] CONTEXT:  while locking tuple (0,48) in relation "lab_counters"
+db-1  | 2026-11-08 05:33:43.367 UTC [6420] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6421] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6421] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6426] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6426] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6427] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6427] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6428] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6428] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6418] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6418] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6422] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6422] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6425] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6425] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.367 UTC [6424] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.367 UTC [6424] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE
+db-1  | 2026-11-08 05:33:43.368 UTC [6419] ERROR:  canceling statement due to lock timeout
+db-1  | 2026-11-08 05:33:43.368 UTC [6419] STATEMENT:  SELECT value FROM lab_counters WHERE id = 1 FOR UPDATE

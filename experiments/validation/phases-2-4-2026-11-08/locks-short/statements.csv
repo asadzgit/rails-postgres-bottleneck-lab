@@ -1,0 +1,49 @@
+queryid,calls,total_exec_ms,mean_exec_ms,stddev_exec_ms,rows,shared_blks_hit,shared_blks_read,temp_blks_read,temp_blks_written,query
+5741165982240540868,555,446.591,0.805,2.559,555,2768,0,0,0,UPDATE lab_counters SET value = value + $1 WHERE id = $2 RETURNING value
+4224056407191937316,12,3.843,0.320,0.069,444,2868,0,0,0,"SELECT t.oid, t.typname, t.typelem, t.typdelim, t.typinput, r.rngsubtype, t.typtype, t.typbasetype
+FROM pg_type as t
+LEFT JOIN pg_range as r ON oid = rngtypid
+WHERE
+  t.typname IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40)"
+-39770638359346538,555,3.406,0.006,0.007,0,0,0,0,0,SET LOCAL lock_timeout = '50ms'
+-877623518157841697,12,2.815,0.235,0.270,660,408,0,0,0,"SELECT t.oid, t.typname, t.typelem, t.typdelim, t.typinput, r.rngsubtype, t.typtype, t.typbasetype
+FROM pg_type as t
+LEFT JOIN pg_range as r ON oid = rngtypid
+WHERE
+  t.typelem IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48)"
+1848412302381531221,12,1.204,0.100,0.029,132,336,0,0,0,"SELECT t.oid, t.typname, t.typelem, t.typdelim, t.typinput, r.rngsubtype, t.typtype, t.typbasetype
+FROM pg_type as t
+LEFT JOIN pg_range as r ON oid = rngtypid
+WHERE
+  t.typtype IN ($1, $2, $3)"
+4897869280416425933,12,1.133,0.094,0.023,0,0,0,0,0,SET SESSION timezone TO 'UTC'
+-1317165100737286208,4,0.917,0.229,0.103,36,84,0,0,0,"SELECT pid, locktype, mode, granted, relation::regclass
+FROM pg_locks WHERE pid IN (
+  SELECT pid FROM pg_stat_activity WHERE datname = current_database()
+) ORDER BY granted, pid"
+-2704593279265783320,4,0.611,0.153,0.036,36,100,0,0,0,"SELECT clock_timestamp() AS sampled_at, pid, usename, application_name, state,
+       wait_event_type, wait_event, now() - query_start AS query_age,
+       left(query, $1) AS query
+FROM pg_stat_activity
+WHERE datname = current_database() AND pid <> pg_backend_pid()
+ORDER BY usename, pid"
+4432334203205823306,4,0.605,0.151,0.026,36,88,0,0,0,"SELECT clock_timestamp() AS sampled_at, a.pid, a.usename, a.state,
+       a.wait_event_type, a.wait_event, now() - a.xact_start AS transaction_age,
+       pg_blocking_pids(a.pid) AS blocking_pids, left(a.query, $1) AS query
+FROM pg_stat_activity a
+WHERE a.datname = current_database() AND a.pid <> pg_backend_pid()
+ORDER BY a.xact_start NULLS LAST"
+-4997070673710299136,12,0.419,0.035,0.019,132,72,0,0,0,"SELECT t.oid, t.typname
+FROM pg_type as t
+WHERE t.typname IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)"
+-5900373699247563212,4,0.318,0.080,0.023,7,84,0,0,0,"SELECT usename, count(*) AS connections FROM pg_stat_activity
+WHERE datname = current_database() GROUP BY usename"
+11701968915743190,555,0.293,0.001,0.000,0,0,0,0,0,BEGIN
+-2835399305386018931,555,0.223,0.000,0.000,0,0,0,0,0,COMMIT
+-1205602243879129291,12,0.086,0.007,0.001,0,0,0,0,0,SET SESSION statement_timeout TO 10000
+-2914826383223362791,1,0.083,0.083,0.000,1,0,0,0,0,SELECT pg_stat_statements_reset()
+-3192281062701522730,12,0.077,0.006,0.001,0,0,0,0,0,set client_encoding to 'unicode'
+6034077781407964120,12,0.044,0.004,0.001,0,0,0,0,0,SET SESSION application_name TO 'rails_bottleneck_lab'
+5947864457175217504,12,0.035,0.003,0.001,0,0,0,0,0,SET client_min_messages TO 'warning'
+162240199179353593,12,0.031,0.003,0.001,0,0,0,0,0,SET standard_conforming_strings = on
+3215524333355785940,12,0.031,0.003,0.001,0,0,0,0,0,SET intervalstyle = iso_8601

@@ -1,0 +1,77 @@
+2026-11-08T05:33:37Z
+scenario=locks-long
+experiment=locks
+vus=12
+duration=5s
+threads=12
+AR_pool=12
+checkout_timeout=2
+role_limit=16
+db_host=db
+db_port=5432
+pgbouncer=0
+backend_pool_size=4
+hold_ms=100
+work_ms=100
+lock_timeout_ms=50
+lock_mode=long
+require_success=0
+8b920c9f469bbc9208fa9ad692d2561909bf5173
+ M README.md
+?? .dockerignore
+?? .env.example
+?? .github/
+?? .gitignore
+?? .rubocop.yml
+?? .ruby-version
+?? AGENTS.md
+?? Gemfile
+?? Gemfile.lock
+?? LICENSE
+?? Rakefile
+?? app/
+?? bin/
+?? compose.yaml
+?? config.ru
+?? config/
+?? db/
+?? docker/
+?? docs/
+?? experiments/
+?? lib/
+?? log/
+?? public/
+?? results/
+?? script/
+?? storage/
+?? test/
+?? tmp/
+?? vendor/
+8f32efd916f1f0329575be18e014838186c51c79899ea980fd42b75eaf0337e0  Gemfile.lock
+d97f61553db7d3ea121a0b85e1763dc89f31522abfe94668d4bcb328c4e53a43  compose.yaml
+6254f981d9a9870ec5253e3368a5aa13fa29568034c9d0a6ef81809013534c73  config/database.yml
+e7cd7bc9f050c783a8a6f88a4aedbfeaffd5214f7c5c5b8d520b2809d32b617c  app/controllers/lab_controller.rb
+c07fe057e2ad7f57ed47b4371708fb85e69ee43e2d3785e2419287217a0081a5  lib/lab/counter_increment.rb
+c59d4d543dca1b473dc179faebd4159c5e39610b6539566e719d89289b08903c  experiments/common/workload.js
+cgroup_driver=none cgroup_version=2
+db_image=sha256:018dbecf6a31cfed1f83c218b5e428a52ac389ad46e495f72831641db49d85a9 cpus_nano=0 memory=0
+                                                           version                                                            
+------------------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 17.11 (Debian 17.11-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+(1 row)
+
+ max_connections 
+-----------------
+ 100
+(1 row)
+
+ superuser_reserved_connections 
+--------------------------------
+ 3
+(1 row)
+
+  rolname   | rolconnlimit | rolsuper 
+------------+--------------+----------
+ lab_client |           16 | f
+(1 row)
+

@@ -1,0 +1,86 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /scripts/k6.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 40s max duration (incl. graceful stop):
+              * default: 5 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 5/5 VUs, 59 complete and 0 interrupted iterations
+default   [  10% ] 5 VUs  01.0s/10s
+
+running (02.0s), 5/5 VUs, 114 complete and 0 interrupted iterations
+default   [  20% ] 5 VUs  02.0s/10s
+
+running (03.0s), 5/5 VUs, 171 complete and 0 interrupted iterations
+default   [  30% ] 5 VUs  03.0s/10s
+
+running (04.0s), 5/5 VUs, 225 complete and 0 interrupted iterations
+default   [  40% ] 5 VUs  04.0s/10s
+
+running (05.0s), 5/5 VUs, 276 complete and 0 interrupted iterations
+default   [  50% ] 5 VUs  05.0s/10s
+
+running (06.0s), 5/5 VUs, 328 complete and 0 interrupted iterations
+default   [  60% ] 5 VUs  06.0s/10s
+
+running (07.0s), 5/5 VUs, 378 complete and 0 interrupted iterations
+default   [  70% ] 5 VUs  07.0s/10s
+
+running (08.0s), 5/5 VUs, 436 complete and 0 interrupted iterations
+default   [  80% ] 5 VUs  08.0s/10s
+
+running (09.0s), 5/5 VUs, 490 complete and 0 interrupted iterations
+default   [  90% ] 5 VUs  09.0s/10s
+
+running (10.0s), 5/5 VUs, 546 complete and 0 interrupted iterations
+default   [ 100% ] 5 VUs  10.0s/10s
+
+
+  █ THRESHOLDS 
+
+    checks
+    ✓ 'rate==1' rate=100.00%
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 1656    164.0933/s
+    checks_succeeded...................: 100.00% 1656 out of 1656
+    checks_failed......................: 0.00%   0 out of 1656
+
+    ✓ HTTP 200
+    ✓ bounded orders from requested customer
+    ✓ most recent first, stable ties
+
+    HTTP
+    http_req_duration.......................................................: avg=90.58ms min=37.87ms med=88.48ms max=209.99ms p(90)=118.24ms p(95)=136.56ms
+      { expected_response:true }............................................: avg=90.58ms min=37.87ms med=88.48ms max=209.99ms p(90)=118.24ms p(95)=136.56ms
+    http_req_failed.........................................................: 0.00%  0 out of 552
+    http_reqs...............................................................: 552    54.697767/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=91.08ms min=38.18ms med=88.85ms max=210.31ms p(90)=118.43ms p(95)=136.78ms
+    iterations..............................................................: 552    54.697767/s
+    vus.....................................................................: 5      min=5        max=5
+    vus_max.................................................................: 5      min=5        max=5
+
+    NETWORK
+    data_received...........................................................: 1.5 MB 148 kB/s
+    data_sent...............................................................: 52 kB  5.1 kB/s
+
+
+
+
+running (10.1s), 0/5 VUs, 552 complete and 0 interrupted iterations
+default ✓ [ 100% ] 5 VUs  10s

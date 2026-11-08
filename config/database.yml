@@ -1,0 +1,63 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  connect_timeout: 2
+  pool: <%= ENV.fetch("DB_POOL", ENV.fetch("RAILS_MAX_THREADS", 5)) %>
+  checkout_timeout: <%= ENV.fetch("DB_CHECKOUT_TIMEOUT", 2) %>
+  prepared_statements: <%= ENV["PGBOUNCER"] != "1" %>
+  advisory_locks: <%= ENV["PGBOUNCER"] != "1" %>
+  variables:
+    application_name: rails_bottleneck_lab
+<% unless ENV["PGBOUNCER"] == "1" %>
+    statement_timeout: <%= ENV.fetch("PG_STATEMENT_TIMEOUT", 10000) %>
+<% end %>
+
+development:
+  <<: *default
+  database: rails_postgres_bottleneck_lab_development
+
+benchmark:
+  <<: *default
+  database: rails_postgres_bottleneck_lab_development
+
+test:
+  <<: *default
+  database: rails_postgres_bottleneck_lab_test
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+
+# Explicit optional lab connections; excluded from ordinary database tasks.
+lab_replica:
+  <<: *default
+  host: replica
+  port: 5432
+  username: rails
+  database: rails_postgres_bottleneck_lab_development
+  replica: true
+  database_tasks: false
+
+lab_single:
+  <<: *default
+  host: shard-a
+  port: 5432
+  username: rails
+  database: lab_single
+  database_tasks: false
+
+lab_shard_a:
+  <<: *default
+  host: shard-a
+  port: 5432
+  username: rails
+  database: lab_shard
+  database_tasks: false
+
+lab_shard_b:
+  <<: *default
+  host: shard-b
+  port: 5432
+  username: rails
+  database: lab_shard
+  database_tasks: false

@@ -1,0 +1,92 @@
+
+=== 2026-11-08T06:49:21Z ===
+          sampled_at           | pid  | usename |   application_name   | state | wait_event_type | wait_event |    query_age    | query  
+-------------------------------+------+---------+----------------------+-------+-----------------+------------+-----------------+--------
+ 2026-11-08 06:49:21.632049+00 | 3444 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.490869 | COMMIT
+ 2026-11-08 06:49:21.632056+00 | 3445 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.483001 | COMMIT
+ 2026-11-08 06:49:21.632057+00 | 3446 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.480835 | COMMIT
+ 2026-11-08 06:49:21.632057+00 | 3447 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.461686 | COMMIT
+ 2026-11-08 06:49:21.632058+00 | 3448 | rails   | rails_bottleneck_lab | idle  | Client          | ClientRead | 00:00:00.521245 | COMMIT
+(5 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           6
+(1 row)
+
+
+=== 2026-11-08T06:49:22Z ===
+          sampled_at           | pid  | usename |   application_name   |        state        | wait_event_type |  wait_event   |    query_age     |                                                                                         query                                                                                         
+-------------------------------+------+---------+----------------------+---------------------+-----------------+---------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2026-11-08 06:49:23.379635+00 | 3444 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.008666  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379641+00 | 3445 | rails   | rails_bottleneck_lab | idle in transaction | Client          | ClientRead    | -00:00:00.001674 | BEGIN
+ 2026-11-08 06:49:23.379642+00 | 3446 | rails   | rails_bottleneck_lab | active              | IPC             | ExecuteGather | 00:00:00.068061  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379643+00 | 3447 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.035032  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379644+00 | 3448 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.035057  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379644+00 | 3781 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.068061  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379645+00 | 3783 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.035032  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379648+00 | 3784 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.035032  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:23.379648+00 | 3785 | rails   | rails_bottleneck_lab | active              |                 |               | 00:00:00.035057  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+(9 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           7
+(1 row)
+
+
+=== 2026-11-08T06:49:24Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type |    wait_event    |    query_age     |                                                                                         query                                                                                         
+-------------------------------+------+---------+----------------------+--------+-----------------+------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2026-11-08 06:49:24.907761+00 | 3444 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead       | 00:00:00.004135  | COMMIT
+ 2026-11-08 06:49:24.907768+00 | 3445 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead       | -00:00:00.001061 | COMMIT
+ 2026-11-08 06:49:24.907769+00 | 3446 | rails   | rails_bottleneck_lab | active |                 |                  | 00:00:00.030921  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:24.90777+00  | 3447 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead       | 00:00:00.004909  | COMMIT
+ 2026-11-08 06:49:24.907771+00 | 3448 | rails   | rails_bottleneck_lab | active | IPC             | BgworkerShutdown | 00:00:00.051347  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:24.907771+00 | 3933 | rails   | rails_bottleneck_lab | active |                 |                  | 00:00:00.030921  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+(6 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |           7
+(1 row)
+
+
+=== 2026-11-08T06:49:25Z ===
+          sampled_at           | pid  | usename |   application_name   | state  | wait_event_type | wait_event |    query_age     |                                                                                         query                                                                                         
+-------------------------------+------+---------+----------------------+--------+-----------------+------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2026-11-08 06:49:26.748737+00 | 3444 | rails   | rails_bottleneck_lab | active |                 |            | 00:00:00.05536   | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:26.748744+00 | 3445 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | -00:00:00.00037  | COMMIT
+ 2026-11-08 06:49:26.748746+00 | 3446 | rails   | rails_bottleneck_lab | active |                 |            | 00:00:00.002622  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:26.748747+00 | 3447 | rails   | rails_bottleneck_lab | idle   | Client          | ClientRead | -00:00:00.000469 | COMMIT
+ 2026-11-08 06:49:26.748748+00 | 3448 | rails   | rails_bottleneck_lab | active |                 |            | 00:00:00.043304  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:26.748748+00 | 4109 | rails   | rails_bottleneck_lab | active |                 |            | 00:00:00.043304  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:26.748749+00 | 4110 | rails   | rails_bottleneck_lab | active |                 |            | 00:00:00.043304  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+ 2026-11-08 06:49:26.748752+00 | 4112 | rails   | rails_bottleneck_lab | active |                 |            | 00:00:00.002622  | SELECT count(*) AS count, coalesce(sum(amount_cents),0)::bigint AS total_cents FROM "lab_partitioning"."events_heap" WHERE occurred_at >= '2024-06-01' AND occurred_at < '2024-07-01'
+(8 rows)
+
+  rolname   | rolconnlimit 
+------------+--------------
+ lab_client |           16
+(1 row)
+
+ usename | connections 
+---------+-------------
+ rails   |          12
+(1 row)
+

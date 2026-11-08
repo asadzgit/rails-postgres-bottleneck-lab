@@ -1,0 +1,223 @@
+{
+  "uid": "rails-pg-lab",
+  "title": "Rails PostgreSQL Bottleneck Lab",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "PostgreSQL connections",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "lab_pg_numbackends",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Active PostgreSQL sessions",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "lab_pg_active",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      }
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Waiting on locks",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "lab_pg_lock_waiters",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Commits / second",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "rate(lab_pg_xact_commit[1m])",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      }
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Rollbacks / second",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "rate(lab_pg_xact_rollback[1m])",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      }
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Buffer reads / second",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "rate(lab_pg_blks_read[1m])",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      }
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "Redis hits / second",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "rate(lab_redis_keyspace_hits[1m])",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 24
+      }
+    },
+    {
+      "id": 8,
+      "type": "timeseries",
+      "title": "Redis misses / second",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "rate(lab_redis_keyspace_misses[1m])",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 24
+      }
+    },
+    {
+      "id": 9,
+      "type": "timeseries",
+      "title": "Rails checkout waiters",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "lab_rails_pool_waiting",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 32
+      }
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "PostgreSQL / Redis availability",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "lab-prometheus"
+      },
+      "targets": [
+        {
+          "expr": "{__name__=~\"lab_(pg|redis)_up\"}",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 32
+      }
+    }
+  ]
+}
